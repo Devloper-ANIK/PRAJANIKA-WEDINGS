@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prajanika Studio — Wedding Cinema, Photography & Aerial Production</title>
+<meta name="description" content="Premium wedding photography, cinematic 4K films and drone aerial production. Build your package live and book on WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F5C044' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Manrope:wght@400..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS & BASE ============ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0A0C10; --bg2:#0E1118; --card:#11141C; --line:rgba(255,255,255,.09);
+  --txt:#EDE9E0; --muted:#9AA0AE; --faint:#5C6370;
+  --royal:#3D5BFF; --violet:#9B5CFF; --crimson:#FF2E63; --sunset:#FF7A1A;
+  --gold:#F5C044; --gold2:#FFE29A;
+  --grad:linear-gradient(100deg,#3D5BFF,#9B5CFF 30%,#FF2E63 55%,#FF7A1A 78%,#F5C044);
+  --font-d:'Fraunces',serif; --font-b:'Manrope',sans-serif; --font-m:'Space Mono',monospace;
+  color-scheme:dark;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:var(--font-b);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::after{content:"";position:fixed;inset:0;z-index:80;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.7'/%3E%3C/svg%3E")}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:rgba(245,192,68,.9);color:#141005}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+body::-webkit-scrollbar{width:10px}body::-webkit-scrollbar-track{background:#0A0C10}
+body::-webkit-scrollbar-thumb{background:#222836;border-radius:99px;border:2px solid #0A0C10}
+body::-webkit-scrollbar-thumb:hover{background:#3a4356}
+.wrap{width:min(1180px,92vw);margin-inline:auto}
+.sec{padding:clamp(64px,9vw,112px) 0;position:relative}
+.mono{font-family:var(--font-m)}
+.ic{width:1em;height:1em;display:inline-block;vertical-align:-.12em;flex:none}
+body.lock{overflow:hidden}
+
+/* headings & overline */
+.overline{display:flex;align-items:center;gap:12px;font-family:var(--font-m);font-size:11px;letter-spacing:.34em;color:var(--gold);text-transform:uppercase;margin-bottom:18px}
+.overline::before{content:"";width:26px;height:1px;background:var(--grad);flex:none}
+.t{font-family:var(--font-d);font-weight:560;font-size:clamp(30px,4.4vw,54px);line-height:1.06;letter-spacing:-.01em}
+.t em,.h1 .gw{font-style:italic;font-weight:460;color:transparent;background:linear-gradient(96deg,#FFE29A,#F5C044 38%,#FF7A1A 72%,#FF2E63);-webkit-background-clip:text;background-clip:text}
+.lead{color:var(--muted);font-size:clamp(15px,1.4vw,17px);max-width:62ch;margin-top:16px}
+.phead{padding:clamp(120px,17vh,170px) 0 clamp(30px,4vw,48px)}
+.phead h1{font-family:var(--font-d);font-weight:560;font-size:clamp(38px,6vw,72px);line-height:1.03;letter-spacing:-.015em}
+.phead .lead{margin-bottom:22px}
+.trust{display:flex;gap:10px;flex-wrap:wrap}
+.tch2{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border:1px solid var(--line);border-radius:99px;font-family:var(--font-m);font-size:10px;letter-spacing:.18em;color:var(--muted)}
+.tch2 .ic{color:var(--gold);font-size:13px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 27px;border-radius:99px;font-weight:700;font-size:14.5px;letter-spacing:.02em;position:relative;cursor:pointer;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s,color .35s,background .35s;will-change:transform}
+.btn .ic{font-size:16px}
+.btn.gold{overflow:hidden;background:linear-gradient(180deg,#FFE7A6,#F0C25A 45%,#D9A32F);color:#191204;box-shadow:0 12px 32px -12px rgba(240,194,90,.55),inset 0 1px 0 rgba(255,255,255,.55)}
+.btn.gold::before{content:"";position:absolute;top:0;left:-70%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-18deg);transition:left .6s ease}
+.btn.gold:hover{transform:translateY(-3px);box-shadow:0 20px 46px -14px rgba(240,194,90,.7),inset 0 1px 0 rgba(255,255,255,.55)}
+.btn.gold:hover::before{left:135%}
+.btn.ghost{border:1px solid rgba(255,255,255,.18);color:var(--txt);background:rgba(255,255,255,.03);backdrop-filter:blur(6px)}
+.btn.ghost:hover{border-color:rgba(245,192,68,.65);color:var(--gold2);transform:translateY(-3px)}
+.btn.wa{background:linear-gradient(180deg,#57E38D,#1EBE6B 50%,#0F9E52);color:#032712;box-shadow:0 12px 32px -12px rgba(30,190,107,.55),inset 0 1px 0 rgba(255,255,255,.4)}
+.btn.wa:hover{transform:translateY(-3px);box-shadow:0 20px 44px -14px rgba(30,190,107,.7)}
+.btn.sm{padding:11px 19px;font-size:13px}
+
+/* glass panel with gradient hairline */
+.neon{position:relative;border-radius:20px;background:linear-gradient(165deg,rgba(255,255,255,.055),rgba(255,255,255,.015) 42%,rgba(255,255,255,.03))}
+.neon::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(140deg,rgba(61,91,255,.55),rgba(155,92,255,.4) 28%,rgba(255,46,99,.42) 52%,rgba(255,122,26,.5) 74%,rgba(245,192,68,.8));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;pointer-events:none;opacity:.7;transition:opacity .45s}
+.neon:hover::before{opacity:1}
+.lift{transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+.lift:hover{transform:translateY(-6px);box-shadow:0 26px 60px -24px rgba(0,0,0,.85),0 0 44px -18px rgba(245,192,68,.25)}
+
+/* forms */
+.fld{margin-bottom:16px}
+.fld label{display:block;font-family:var(--font-m);font-size:10.5px;letter-spacing:.22em;color:var(--muted);margin-bottom:8px;text-transform:uppercase}
+input,select,textarea{width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:13px 15px;color:var(--txt);font:inherit;font-size:14.5px;transition:border-color .3s,box-shadow .3s}
+textarea{resize:vertical;min-height:96px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:rgba(245,192,68,.65);box-shadow:0 0 0 3px rgba(245,192,68,.12)}
+.sel{position:relative}
+.sel::after{content:"";position:absolute;right:18px;top:50%;width:7px;height:7px;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+.sel select{appearance:none}
+input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(.75) sepia(.35);cursor:pointer}
+input[type="range"]{-webkit-appearance:none;appearance:none;height:4px;border-radius:99px;padding:0;background:linear-gradient(90deg,rgba(245,192,68,.95) var(--p,30%),#232A38 var(--p,30%));cursor:pointer}
+input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:linear-gradient(180deg,#FFE7A6,#D9A32F);border:2px solid #191204;box-shadow:0 0 14px rgba(245,192,68,.55);cursor:grab;transition:transform .2s}
+input[type="range"]::-webkit-slider-thumb:active{transform:scale(1.2)}
+input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:linear-gradient(180deg,#FFE7A6,#D9A32F);border:2px solid #191204;cursor:grab}
+
+/* switch */
+.sw{position:relative;width:46px;height:26px;border-radius:99px;background:#1A1F2B;border:1px solid var(--line);transition:.3s;flex:none}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#7D8595;transition:.35s cubic-bezier(.6,0,.2,1.4)}
+.sw.on{background:linear-gradient(90deg,rgba(245,192,68,.25),rgba(255,122,26,.4));border-color:rgba(245,192,68,.65)}
+.sw.on::after{left:23px;background:var(--gold);box-shadow:0 0 12px rgba(245,192,68,.65)}
+
+/* chips */
+.chip{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:2px;padding:11px 17px;border:1px solid var(--line);border-radius:13px;font-size:13.5px;font-weight:700;color:var(--muted);transition:.3s;min-width:120px}
+.chip small{font-family:var(--font-m);font-size:9.5px;letter-spacing:.14em;color:var(--faint);font-weight:400}
+.chip:hover{border-color:rgba(245,192,68,.5);color:var(--txt)}
+.chip.on{border-color:rgba(245,192,68,.8);background:linear-gradient(180deg,rgba(245,192,68,.16),rgba(245,192,68,.05));color:var(--gold2);box-shadow:0 0 26px -8px rgba(245,192,68,.4)}
+.chip.on small{color:rgba(245,192,68,.75)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);filter:blur(6px);transition:opacity .85s cubic-bezier(.2,.8,.2,1),transform .85s cubic-bezier(.2,.8,.2,1),filter .85s}
+.rv.in{opacity:1;transform:none;filter:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+/* ============ SPLASH ============ */
+#splash{position:fixed;inset:0;z-index:500;background:#0A0C10;display:grid;place-items:center;transition:opacity .8s ease .1s,transform 1s cubic-bezier(.5,0,.2,1) .1s,visibility .8s .1s}
+#splash.done{opacity:0;transform:scale(1.14);visibility:hidden;pointer-events:none}
+.sp-in{text-align:center;width:min(400px,86vw)}
+.sp-logo svg{width:92px;height:92px;color:var(--gold);filter:drop-shadow(0 0 26px rgba(245,192,68,.4));animation:spin 9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sp-name{margin-top:26px;font-family:var(--font-d);font-size:clamp(21px,4vw,29px);letter-spacing:.42em;padding-left:.42em;font-weight:500}
+.sp-name span{display:inline-block;opacity:0;filter:blur(8px);transform:translateY(12px);animation:ltr .7s cubic-bezier(.2,.8,.2,1) var(--d) forwards}
+@keyframes ltr{to{opacity:1;filter:blur(0);transform:none}}
+.sp-sub{font-family:var(--font-m);font-size:10px;letter-spacing:.62em;padding-left:.62em;color:var(--gold);margin-top:10px;opacity:0;animation:ltr .8s .9s forwards}
+.sp-bar{width:100%;height:2px;background:#1C2230;border-radius:99px;margin:36px 0 12px;overflow:hidden}
+.sp-fill{height:100%;width:0%;background:var(--grad);box-shadow:0 0 16px rgba(245,192,68,.6);transition:width .25s ease}
+.sp-row{display:flex;justify-content:space-between;font-family:var(--font-m);font-size:10.5px;letter-spacing:.22em;color:var(--muted)}
+.sp-row b{color:var(--gold);font-weight:400}
+.sp-skip{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-family:var(--font-m);font-size:9.5px;letter-spacing:.3em;color:var(--faint);opacity:0;animation:ltr 1s 2s forwards;cursor:pointer}
+
+/* ============ CURSOR ============ */
+#curR{position:fixed;z-index:90;top:0;left:0;width:36px;height:36px;border:1px solid rgba(245,192,68,.55);border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);transition:width .3s,height .3s,background-color .3s,opacity .4s;opacity:0}
+#curR.hov{width:58px;height:58px;background:rgba(245,192,68,.08)}
+#curD{position:fixed;z-index:90;width:5px;height:5px;background:var(--gold);border-radius:50%;pointer-events:none;transform:translate(-50%,-50%)}
+@media(pointer:coarse){#curR,#curD{display:none}}
+
+/* ============ HEADER ============ */
+#hdr{position:fixed;inset:0 0 auto;z-index:100;border-bottom:1px solid transparent;transition:background .4s,border-color .4s,backdrop-filter .4s}
+#hdr.sc{background:rgba(10,12,16,.72);backdrop-filter:blur(18px);border-bottom-color:rgba(255,255,255,.07)}
+.h-in{width:min(1320px,94vw);margin:auto;display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;cursor:pointer}
+.logo .ic{font-size:27px;color:var(--gold)}
+.logo-t{display:block;font-family:var(--font-d);font-size:19px;letter-spacing:.15em;font-weight:550;line-height:1}
+.logo-s{display:block;font-family:var(--font-m);font-size:8.5px;letter-spacing:.52em;color:var(--gold);margin-top:4px}
+.nav{display:flex;gap:4px}
+.nav a{position:relative;padding:9px 14px;font-size:13.5px;font-weight:700;letter-spacing:.04em;color:var(--muted);transition:color .3s}
+.nav a::after{content:"";position:absolute;left:14px;right:14px;bottom:2px;height:1.5px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.nav a:hover,.nav a.on{color:var(--txt)}
+.nav a.on::after{transform:scaleX(1)}
+.h-cta{display:flex;align-items:center;gap:16px}
+.h-tel{display:flex;align-items:center;gap:8px;font-family:var(--font-m);font-size:11.5px;letter-spacing:.08em;color:var(--muted);transition:color .3s}
+.h-tel:hover{color:var(--gold)}
+.h-tel .ic{color:var(--gold);font-size:14px}
+#burger{display:none;color:var(--txt);font-size:24px;padding:6px}
+@media(max-width:1200px){.h-tel{display:none}}
+@media(max-width:1000px){.nav{display:none}#burger{display:block}}
+
+/* mobile nav */
+#mnav{position:fixed;inset:0;z-index:150;background:rgba(8,9,13,.94);backdrop-filter:blur(22px);display:flex;flex-direction:column;justify-content:center;padding:0 9vw;opacity:0;visibility:hidden;transition:.45s}
+#mnav.open{opacity:1;visibility:visible}
+#mnav a{font-family:var(--font-d);font-size:clamp(28px,7.5vw,42px);padding:13px 0;border-bottom:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;align-items:baseline;transform:translateY(26px);opacity:0;transition:.55s cubic-bezier(.2,.8,.2,1)}
+#mnav.open a{transform:none;opacity:1}
+#mnav a:nth-child(1){transition-delay:.06s}#mnav a:nth-child(2){transition-delay:.12s}#mnav a:nth-child(3){transition-delay:.18s}#mnav a:nth-child(4){transition-delay:.24s}#mnav a:nth-child(5){transition-delay:.3s}#mnav a:nth-child(6){transition-delay:.36s}
+#mnav a .n{font-family:var(--font-m);font-size:11px;color:var(--gold)}
+#mnav .m-cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+#mnavClose{position:absolute;top:22px;right:24px;font-size:26px;color:var(--muted)}
+
+/* ============ PAGES ============ */
+.page{display:none}
+.page.act{display:block;animation:pgIn .65s cubic-bezier(.2,.8,.2,1)}
+@keyframes pgIn{from{opacity:0;transform:translateY(16px)}}
+
+/* ---- HERO ---- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.03)}
+.hero-bg img.on{opacity:1;animation:kb 10s ease-out forwards}
+@keyframes kb{from{transform:scale(1.02) translate(0,0)}to{transform:scale(1.15) translate(-1.5%,-1.5%)}}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,16,.72),rgba(10,12,16,.12) 34%,rgba(10,12,16,.3) 62%,rgba(10,12,16,.98)),linear-gradient(90deg,rgba(10,12,16,.55),transparent 60%)}
+.hero-in{position:relative;z-index:3;width:min(1180px,92vw);margin:0 auto;padding:110px 0 130px}
+.h-fade{opacity:0;transform:translateY(18px);transition:opacity 1s cubic-bezier(.16,1,.3,1) var(--d,0s),transform 1s cubic-bezier(.16,1,.3,1) var(--d,0s)}
+body.ready .h-fade{opacity:1;transform:none}
+.h1{font-family:var(--font-d);font-weight:570;font-size:clamp(44px,7.4vw,96px);line-height:1.02;letter-spacing:-.015em;margin:18px 0 0}
+.lw{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.lw i{display:inline-block;font-style:normal;transform:translateY(115%);transition:transform 1.1s cubic-bezier(.16,1,.3,1) var(--d)}
+body.ready .lw i{transform:none}
+.hero-sub{max-width:54ch;color:#C9CCD6;margin:28px 0 36px;font-size:clamp(15px,1.6vw,18.5px)}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+.h-rec{position:absolute;top:104px;right:0;display:flex;gap:9px;align-items:center;font-family:var(--font-m);font-size:10.5px;letter-spacing:.24em;color:#FFB3C1}
+.h-rec .dot{width:8px;height:8px;border-radius:50%;background:#FF2E63;box-shadow:0 0 12px #FF2E63;animation:blink 1.3s infinite}
+@keyframes blink{50%{opacity:.15}}
+.v-cue{position:absolute;right:30px;bottom:120px;writing-mode:vertical-rl;font-family:var(--font-m);font-size:9.5px;letter-spacing:.4em;color:rgba(255,255,255,.45);display:flex;align-items:center;gap:12px;z-index:3}
+.v-cue::after{content:"";width:1px;height:56px;background:linear-gradient(180deg,rgba(245,192,68,.8),transparent);animation:cue 2s infinite}
+@keyframes cue{from{transform:scaleY(0);transform-origin:top}60%{transform:scaleY(1)}to{transform:scaleY(1);opacity:0}}
+.hero-mq{position:absolute;left:0;right:0;bottom:0;border-top:1px solid rgba(255,255,255,.09);background:rgba(10,12,16,.4);backdrop-filter:blur(8px);padding:14px 0;overflow:hidden;z-index:3}
+.mq-track{display:flex;align-items:center;gap:46px;width:max-content;animation:mq 32s linear infinite}
+.hero-mq:hover .mq-track{animation-play-state:paused}
+.mq-track span{font-family:var(--font-m);font-size:11px;letter-spacing:.28em;color:rgba(255,255,255,.55);white-space:nowrap}
+.mq-track i{width:6px;height:6px;background:var(--gold);transform:rotate(45deg);flex:none;box-shadow:0 0 8px rgba(245,192,68,.7)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---- STATS ---- */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:34px}
+.stat{padding:6px 30px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat .ic{color:var(--gold);font-size:17px;margin-bottom:10px;display:block}
+.stat .num{font-family:var(--font-d);font-size:clamp(40px,4.8vw,62px);font-weight:570;line-height:1}
+.stat.gold .num{background:linear-gradient(96deg,#FFE29A,#F5C044 45%,#FF7A1A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat .lbl{margin-top:10px;font-weight:800;font-size:14px}
+.stat p{color:var(--faint);font-size:12.5px;margin-top:3px;line-height:1.5}
+.shoton{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:56px;padding-top:34px;border-top:1px solid var(--line)}
+.shoton .sl{font-family:var(--font-m);font-size:11px;letter-spacing:.32em;color:var(--faint);margin-right:10px}
+.gchip{display:inline-flex;align-items:center;gap:9px;padding:9px 16px;border:1px solid var(--line);border-radius:99px;font-family:var(--font-m);font-size:10.5px;letter-spacing:.14em;color:var(--muted);transition:.35s}
+.gchip .ic{color:var(--gold);font-size:14px}
+.gchip:hover{border-color:rgba(245,192,68,.55);color:var(--txt);transform:translateY(-3px)}
+
+/* ---- INDEX ROWS ---- */
+.idx{border-top:1px solid var(--line)}
+.idx a{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:24px;padding:25px 10px;border-bottom:1px solid var(--line);transition:background .4s,padding .4s}
+.idx .n{font-family:var(--font-m);font-size:11px;color:var(--faint);letter-spacing:.2em}
+.idx .tt{font-family:var(--font-d);font-size:clamp(21px,3vw,33px);font-weight:520;transition:transform .45s,color .35s}
+.idx .dd{grid-column:2;color:var(--muted);font-size:13.5px;margin-top:2px}
+.idx .ar{width:46px;height:46px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--muted);transition:.4s}
+.idx a:hover{background:rgba(255,255,255,.03);padding-left:24px}
+.idx a:hover .tt{transform:translateX(6px);color:var(--gold2)}
+.idx a:hover .ar{background:var(--gold);border-color:var(--gold);color:#191204;transform:rotate(-45deg)}
+
+/* ---- BEFORE / AFTER ---- */
+.ba-tabs{display:flex;gap:10px;margin:40px 0 18px;flex-wrap:wrap}
+.ba-tab{padding:9px 18px;border:1px solid var(--line);border-radius:99px;font-family:var(--font-m);font-size:10.5px;letter-spacing:.2em;color:var(--muted);transition:.3s}
+.ba-tab.on{border-color:rgba(245,192,68,.75);background:rgba(245,192,68,.12);color:var(--gold2)}
+.ba{--cut:52%;position:relative;border-radius:20px;overflow:hidden;aspect-ratio:16/9;user-select:none;touch-action:none;cursor:ew-resize;border:1px solid var(--line);transition:opacity .35s}
+.ba.fading{opacity:.15}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba .graded{filter:saturate(1.3) contrast(1.08) brightness(1.03)}
+.ba .veil{position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,150,60,.18),rgba(61,91,255,.12) 55%,rgba(255,46,99,.14));mix-blend-mode:soft-light;pointer-events:none}
+.ba .raw{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--cut)) 0 0)}
+.ba .raw img{filter:grayscale(.94) brightness(.93) contrast(.92)}
+.ba .bar{position:absolute;top:0;bottom:0;left:var(--cut);width:2px;background:linear-gradient(180deg,rgba(255,255,255,.15),#F5C044,#F5C044,rgba(255,255,255,.15));transform:translateX(-1px);pointer-events:none}
+.ba .grab{position:absolute;top:50%;left:var(--cut);transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:rgba(10,12,16,.55);backdrop-filter:blur(8px);border:1px solid rgba(245,192,68,.85);display:grid;place-items:center;color:var(--gold);box-shadow:0 0 34px rgba(245,192,68,.4);pointer-events:none;font-size:18px}
+.ba .tag{position:absolute;top:16px;font-family:var(--font-m);font-size:10px;letter-spacing:.26em;padding:8px 13px;background:rgba(10,12,16,.6);border:1px solid rgba(255,255,255,.14);border-radius:99px;backdrop-filter:blur(6px);pointer-events:none}
+.ba .tag.l{left:16px;color:#A9AEBB}
+.ba .tag.r{right:16px;color:var(--gold)}
+.ba-hint{margin-top:14px;font-family:var(--font-m);font-size:10px;letter-spacing:.28em;color:var(--faint);text-align:center}
+
+/* ---- QUICK ESTIMATOR ---- */
+.qe{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,60px);padding:clamp(28px,4vw,52px);border-radius:22px;margin-top:40px}
+.qe h3{font-family:var(--font-d);font-size:clamp(24px,2.6vw,32px);font-weight:560;line-height:1.1}
+.qe .qp{color:var(--muted);font-size:14.5px;margin-top:12px;max-width:44ch}
+.qe-out{margin-top:20px;padding:18px 22px;border:1px dashed rgba(245,192,68,.45);border-radius:14px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.qe-out strong{font-family:var(--font-d);font-size:clamp(28px,3vw,40px);font-weight:600;color:var(--gold2);transition:transform .3s}
+.qe-out strong.pop{animation:pop .45s}
+@keyframes pop{35%{transform:scale(1.1)}}
+.qe-out em{color:var(--faint);font-style:normal;font-family:var(--font-m);font-size:10px;letter-spacing:.16em}
+.qe-links{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+.step{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:99px;background:rgba(255,255,255,.03)}
+.step button{width:46px;height:50px;display:grid;place-items:center;color:var(--muted);font-size:17px;transition:.3s}
+.step button:hover{color:var(--gold);background:rgba(245,192,68,.08)}
+.step .v{min-width:70px;text-align:center;font-family:var(--font-d);font-size:23px}
+.step .v small{font-family:var(--font-m);font-size:9px;letter-spacing:.24em;color:var(--faint);display:block;margin-top:-3px}
+.qe-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px dashed rgba(255,255,255,.08)}
+.qe-row .ql{font-size:13.5px;font-weight:700}
+.qe-row .ql small{display:block;font-family:var(--font-m);font-size:9.5px;letter-spacing:.14em;color:var(--faint);font-weight:400;margin-top:2px}
+
+/* ---- REVIEWS ---- */
+.rev{max-width:860px;margin:0 auto;text-align:center}
+.rev-meta{text-align:center;font-family:var(--font-m);font-size:10.5px;letter-spacing:.26em;color:var(--faint);margin:14px 0 44px}
+.rev .stars{color:var(--gold);display:flex;gap:5px;justify-content:center;font-size:16px}
+.rev blockquote{font-family:var(--font-d);font-style:italic;font-weight:430;font-size:clamp(21px,2.7vw,31px);line-height:1.38;margin:22px 0 26px;transition:opacity .4s,transform .4s}
+.rev.swap blockquote,.rev.swap .who{opacity:0;transform:translateY(10px)}
+.rev .who{font-family:var(--font-m);font-size:12px;letter-spacing:.2em;color:var(--muted);transition:opacity .4s,transform .4s}
+.rev .who b{color:var(--txt);font-weight:700}
+.rev .who span{color:var(--gold)}
+.rev-nav{display:flex;justify-content:center;align-items:center;gap:18px;margin-top:34px}
+.rbtn{width:46px;height:46px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--muted);transition:.3s;font-size:17px}
+.rbtn:hover{border-color:rgba(245,192,68,.7);color:var(--gold);transform:translateY(-2px)}
+.dots{display:flex;gap:8px}
+.dot{width:7px;height:7px;border-radius:99px;background:#2A3040;transition:.4s;cursor:pointer}
+.dot.on{width:26px;background:var(--grad)}
+
+/* ---- CTA BAND ---- */
+.cta-band{text-align:center;border-top:1px solid var(--line);background:radial-gradient(60% 90% at 50% 115%,rgba(245,192,68,.08),transparent)}
+.cta-band .t{font-size:clamp(32px,5vw,60px)}
+.cta-band .ov{justify-content:center}
+.cta-band .overline::before{display:none}
+.cta-band .row{display:flex;gap:16px;justify-content:center;margin-top:36px;flex-wrap:wrap}
+
+/* ---- RITUALS ---- */
+.ritual{display:grid;grid-template-columns:1fr 1.06fr;gap:clamp(30px,5vw,70px);align-items:center;padding:clamp(44px,6vw,74px) 0;border-top:1px solid var(--line)}
+.ritual.flip .r-media{order:2}
+.r-media{position:relative}
+.frame{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:5/4}
+.frame img{width:100%;height:100%;object-fit:cover;transform:scale(1.05);transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.r-media:hover .frame img{transform:scale(1.13)}
+.frame::after{content:"";position:absolute;inset:0;border:1px solid rgba(245,192,68,.55);border-radius:16px;transform:translate(14px,14px);pointer-events:none;transition:transform .5s}
+.r-media:hover .frame::after{transform:translate(7px,7px)}
+.r-num{position:absolute;top:-40px;left:-14px;font-family:var(--font-d);font-size:clamp(80px,9vw,128px);font-weight:600;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.14);pointer-events:none;z-index:2}
+.ritual.flip .r-num{left:auto;right:-10px}
+.r-meta{position:absolute;bottom:14px;left:14px;font-size:10px;letter-spacing:.22em;color:var(--gold2);padding:7px 12px;background:rgba(10,12,16,.6);border:1px solid rgba(255,255,255,.14);border-radius:99px;backdrop-filter:blur(6px)}
+.r-body .k{font-size:10.5px;letter-spacing:.3em;color:var(--gold);margin-bottom:12px}
+.r-body h3{font-family:var(--font-d);font-size:clamp(24px,3vw,36px);font-weight:550;margin-bottom:12px;line-height:1.12}
+.r-body .rd{color:var(--muted);font-size:15px;margin-bottom:20px;max-width:52ch}
+.r-feats{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin-bottom:26px}
+.r-feats li{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#C4C8D2;line-height:1.45}
+.r-feats .ic{color:var(--gold);font-size:15px;margin-top:2px}
+.r-buy{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-bottom:20px}
+.r-price small{display:block;font-family:var(--font-m);font-size:9.5px;letter-spacing:.24em;color:var(--faint);margin-bottom:2px;text-transform:uppercase}
+.r-price span{font-family:var(--font-d);font-size:30px;font-weight:600}
+.r-price span.pop{animation:pop .45s}
+.r-cta{display:flex;gap:10px;flex-wrap:wrap;margin-left:auto}
+.drone{border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:rgba(255,255,255,.02);transition:border-color .4s}
+.drone.open{border-color:rgba(245,192,68,.5)}
+.drone-h{display:flex;align-items:center;gap:12px}
+.drone-h .ic{color:var(--gold);font-size:18px}
+.drone-h .t{font-size:13.5px;font-weight:700}
+.drone-h .p{margin-left:auto;font-family:var(--font-m);font-size:11.5px;color:var(--gold);white-space:nowrap}
+.drone-tiers{display:flex;gap:8px;margin-top:12px;max-height:0;opacity:0;overflow:hidden;transition:max-height .5s ease,opacity .5s ease}
+.drone.open .drone-tiers{max-height:70px;opacity:1}
+.tch{flex:1;padding:8px 6px;border:1px solid var(--line);border-radius:10px;font-family:var(--font-m);font-size:10px;letter-spacing:.08em;color:var(--muted);text-align:center;transition:.3s}
+.tch b{display:block;font-size:11.5px;color:var(--txt);font-weight:400;margin-bottom:1px}
+.tch.on{border-color:rgba(245,192,68,.75);background:rgba(245,192,68,.1);color:var(--gold2)}
+.tch.on b{color:var(--gold2)}
+.drone-sub{margin-top:10px;font-size:9px;letter-spacing:.16em;color:var(--faint);opacity:0;transition:opacity .4s}
+.drone.open .drone-sub{opacity:1}
+
+/* ---- DRONE BAND ---- */
+.drone-band{display:grid;grid-template-columns:.85fr 1.35fr;gap:clamp(28px,4vw,64px);padding:clamp(28px,4.5vw,56px);border-radius:24px;margin-top:20px}
+.drone-band h3{font-family:var(--font-d);font-size:clamp(24px,3vw,36px);font-weight:560;line-height:1.1}
+.drone-band p{color:var(--muted);font-size:14.5px;margin-top:14px}
+.db-price{margin:20px 0 24px;font-size:11px;letter-spacing:.2em;color:var(--gold)}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr)}
+.tier{padding:6px 26px;border-left:1px solid var(--line);position:relative}
+.tier:first-child{border-left:0;padding-left:6px}
+.tier .tn{font-size:10px;letter-spacing:.26em;color:var(--gold)}
+.tier .tp{font-family:var(--font-d);font-size:clamp(26px,2.6vw,34px);font-weight:600;margin:10px 0 14px}
+.tier ul{list-style:none}
+.tier li{display:flex;gap:8px;font-size:12.5px;color:#C4C8D2;padding:5px 0;line-height:1.4}
+.tier li .ic{color:var(--gold);font-size:13px;margin-top:3px}
+.hot-chip{position:absolute;top:-12px;left:26px;padding:4px 10px;border-radius:99px;background:var(--grad);color:#12100A;font-family:var(--font-m);font-size:8.5px;letter-spacing:.2em;font-weight:700}
+
+/* ---- FILMS & ALBUMS ---- */
+.fa{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:40px}
+.fa-panel{padding:clamp(26px,3.5vw,46px);border-radius:22px;display:flex;flex-direction:column}
+.fa-ic{width:52px;height:52px;border:1px solid rgba(245,192,68,.5);border-radius:14px;display:grid;place-items:center;color:var(--gold);font-size:23px;margin-bottom:20px;background:rgba(245,192,68,.08)}
+.fa-panel h3{font-family:var(--font-d);font-size:clamp(22px,2.4vw,30px);font-weight:560}
+.fa-panel .fp{color:var(--muted);font-size:14px;margin:10px 0 20px}
+.fa-panel ul{list-style:none;margin-bottom:26px}
+.fa-panel li{display:flex;gap:10px;font-size:13.5px;color:#C4C8D2;padding:7px 0;border-bottom:1px dashed rgba(255,255,255,.07)}
+.fa-panel li .ic{color:var(--gold);font-size:14px;margin-top:4px}
+.fa-foot{margin-top:auto;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.fa-foot .pr{font-family:var(--font-d);font-size:24px;font-weight:600}
+.fa-foot .pr small{display:block;font-family:var(--font-m);font-size:9px;letter-spacing:.22em;color:var(--faint)}
+.fa-foot .btn{margin-left:auto}
+
+/* ---- PORTFOLIO ---- */
+.pf-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:34px 0 12px}
+.ptab{padding:10px 19px;border:1px solid var(--line);border-radius:99px;font-size:13px;font-weight:700;color:var(--muted);transition:.3s}
+.ptab:hover{color:var(--txt);border-color:rgba(245,192,68,.5)}
+.ptab.on{border-color:rgba(245,192,68,.8);background:linear-gradient(180deg,rgba(245,192,68,.16),rgba(245,192,68,.05));color:var(--gold2);box-shadow:0 0 24px -8px rgba(245,192,68,.4)}
+.pf-count{font-family:var(--font-m);font-size:10px;letter-spacing:.24em;color:var(--faint);margin-bottom:20px}
+#pgrid{columns:3 300px;column-gap:16px}
+.pf-item{break-inside:avoid;margin-bottom:16px;border-radius:14px;overflow:hidden;position:relative;cursor:pointer;border:1px solid rgba(255,255,255,.06);animation:itemIn .6s cubic-bezier(.2,.8,.2,1) both;background:var(--card)}
+@keyframes itemIn{from{opacity:0;transform:translateY(20px) scale(.97)}}
+.pf-item img{width:100%;transform:scale(1.03);transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.pf-item:hover img{transform:scale(1.11)}
+.pf-item .ov{position:absolute;inset:auto 0 0 0;padding:44px 16px 14px;background:linear-gradient(180deg,transparent,rgba(6,8,12,.88));display:flex;justify-content:space-between;align-items:flex-end;opacity:0;transform:translateY(10px);transition:.4s}
+.pf-item:hover .ov{opacity:1;transform:none}
+.ov .t{font-family:var(--font-d);font-size:16px}
+.ov .c{display:block;font-family:var(--font-m);font-size:9.5px;letter-spacing:.2em;color:var(--gold);margin-top:3px}
+.ov .ic{color:rgba(255,255,255,.85);font-size:18px}
+
+/* lightbox */
+#lb{position:fixed;inset:0;z-index:180;background:rgba(6,7,10,.92);backdrop-filter:blur(14px);opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s;display:grid;place-items:center}
+#lb.open{opacity:1;visibility:visible}
+.lb-stage{position:relative;display:grid;place-items:center;width:min(1040px,94vw);height:82vh;touch-action:none}
+.lb-stage img{max-width:100%;max-height:100%;border-radius:8px;transition:transform .45s cubic-bezier(.2,.8,.2,1);will-change:transform}
+.lb-stage img.pan{transition:none}
+.lbc{width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);backdrop-filter:blur(8px);display:grid;place-items:center;color:#fff;transition:.3s;font-size:19px}
+.lbc:hover{border-color:rgba(245,192,68,.8);color:var(--gold)}
+.lb-x{position:absolute;top:22px;right:26px;z-index:5}
+.lb-p{position:absolute;left:20px;top:50%;transform:translateY(-50%);z-index:5}
+.lb-n{position:absolute;right:20px;top:50%;transform:translateY(-50%);z-index:5}
+.lb-cap{position:absolute;left:0;right:0;bottom:0;padding:56px 30px 22px;display:flex;align-items:flex-end;gap:14px;background:linear-gradient(0deg,rgba(6,7,10,.85),transparent);pointer-events:none}
+.lb-cap .t{font-family:var(--font-d);font-size:19px}
+.lb-cap .c{display:block;font-family:var(--font-m);font-size:9.5px;letter-spacing:.22em;color:var(--gold);margin-bottom:3px}
+.lb-count{margin-left:auto;font-family:var(--font-m);font-size:11px;letter-spacing:.2em;color:var(--muted)}
+.lb-z{position:absolute;top:26px;left:28px;font-family:var(--font-m);font-size:9.5px;letter-spacing:.24em;color:var(--muted);padding:8px 13px;border:1px solid rgba(255,255,255,.15);border-radius:99px;background:rgba(255,255,255,.04)}
+
+/* ---- BUILDER ---- */
+.b-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,4vw,64px);align-items:start}
+.b-step{padding:24px 0;border-bottom:1px solid var(--line)}
+.b-step:first-child{padding-top:0}
+.b-lab{display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap}
+.b-lab .bn{font-family:var(--font-m);font-size:11px;color:var(--gold);letter-spacing:.22em}
+.b-lab .bt{font-weight:800;font-size:17px}
+.b-lab .hint{margin-left:auto;font-family:var(--font-m);font-size:10px;letter-spacing:.14em;color:var(--faint)}
+.b-days{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.b-days .dn{font-size:12.5px;color:var(--muted)}
+.b-receipt{position:sticky;top:96px;padding:clamp(24px,3vw,38px);border-radius:22px}
+.b-lines .ln{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dashed rgba(255,255,255,.08);font-size:13.5px;animation:lnIn .5s cubic-bezier(.2,.8,.2,1) both}
+@keyframes lnIn{from{opacity:0;transform:translateX(16px)}}
+.ln .l{color:var(--muted)}
+.ln .l small{display:block;font-family:var(--font-m);font-size:9px;letter-spacing:.1em;color:var(--faint);margin-top:1px}
+.ln .a{font-family:var(--font-m);font-size:12.5px;color:var(--txt);white-space:nowrap}
+.b-total{display:flex;justify-content:space-between;align-items:baseline;padding:20px 0 4px}
+.b-total span{font-size:13px;color:var(--muted)}
+.b-total strong{font-family:var(--font-d);font-size:clamp(32px,3.4vw,42px);font-weight:600;color:var(--gold2)}
+.b-note{font-family:var(--font-m);font-size:9.5px;color:var(--faint);letter-spacing:.14em;margin:8px 0 22px;line-height:1.8}
+.b-actions{display:grid;gap:12px}
+.cb-form{margin-top:18px;display:grid;gap:10px;animation:lnIn .4s both}
+.cb-form input{padding:11px 14px;font-size:13.5px}
+
+/* ---- ABOUT ---- */
+.ab-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,70px);align-items:center}
+.ab-imgs{position:relative;padding-bottom:80px}
+.ab-i1{width:80%;border-radius:16px;position:relative;overflow:hidden}
+.ab-i1::after{content:"";position:absolute;inset:0;border:1px solid rgba(245,192,68,.5);border-radius:16px;transform:translate(14px,14px)}
+.ab-i1 img{width:100%;aspect-ratio:9/7;object-fit:cover}
+.ab-i2{width:52%;position:absolute;right:0;bottom:0;border-radius:16px;border:6px solid var(--bg);box-shadow:0 30px 80px -30px rgba(0,0,0,.85);overflow:hidden}
+.ab-i2 img{width:100%;aspect-ratio:7/8;object-fit:cover}
+.pull{font-family:var(--font-d);font-style:italic;font-weight:430;font-size:clamp(22px,3vw,36px);line-height:1.3;margin-bottom:22px}
+.pull em{color:var(--gold2)}
+.ab-txt p{color:var(--muted);font-size:15px;margin-bottom:14px}
+.vision{display:grid;grid-template-columns:repeat(3,1fr);margin-top:20px;border-top:1px solid var(--line)}
+.v-item{padding:34px 30px 8px;border-left:1px solid var(--line)}
+.v-item:first-child{border-left:0;padding-left:0}
+.v-item .vn{font-family:var(--font-m);font-size:11px;letter-spacing:.24em;color:var(--gold)}
+.v-item h4{font-family:var(--font-d);font-size:21px;font-weight:560;margin:10px 0 8px}
+.v-item p{color:var(--muted);font-size:13.5px}
+.team{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.5vw,30px);margin-top:44px}
+.tm:nth-child(2){margin-top:46px}.tm:nth-child(3){margin-top:14px}.tm:nth-child(4){margin-top:60px}
+.tm .ph{border-radius:14px;overflow:hidden;aspect-ratio:3/4;position:relative}
+.tm .ph img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.tm:hover .ph img{transform:scale(1.12)}
+.tm-chip{position:absolute;top:12px;left:12px;font-size:9px;letter-spacing:.2em;color:var(--gold2);padding:6px 10px;background:rgba(10,12,16,.6);border:1px solid rgba(255,255,255,.15);border-radius:99px;backdrop-filter:blur(6px)}
+.tm h4{font-family:var(--font-d);font-size:20px;font-weight:560;margin:15px 0 3px}
+.tm .rl{font-family:var(--font-m);font-size:9.5px;letter-spacing:.2em;color:var(--gold)}
+.tm p{font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.55}
+.gear{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,4vw,64px);align-items:start;margin-top:20px}
+.g-show{position:sticky;top:110px;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.g-show img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:opacity .3s}
+.g-show .gl{position:absolute;left:14px;bottom:14px;font-family:var(--font-m);font-size:9.5px;letter-spacing:.22em;color:var(--gold2);padding:7px 12px;background:rgba(10,12,16,.65);border:1px solid rgba(255,255,255,.15);border-radius:99px;backdrop-filter:blur(6px)}
+.gr{display:grid;grid-template-columns:52px 1fr auto;gap:18px;align-items:center;padding:20px 8px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .35s,padding .35s}
+.gr .gi{width:44px;height:44px;border:1px solid var(--line);border-radius:12px;display:grid;place-items:center;color:var(--gold);transition:.3s}
+.gr h4{font-size:16.5px;font-weight:800}
+.gr .sp{font-family:var(--font-m);font-size:9.5px;letter-spacing:.16em;color:var(--faint);margin-top:3px}
+.gr .st{font-family:var(--font-m);font-size:9.5px;letter-spacing:.2em;color:var(--faint);transition:.3s}
+.gr:hover{background:rgba(255,255,255,.03);padding-left:16px}
+.gr.on .gi{border-color:rgba(245,192,68,.7);background:rgba(245,192,68,.12)}
+.gr.on .st,.gr:hover .st{color:var(--gold)}
+
+/* ---- CONTACT ---- */
+.ct-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,4vw,58px);align-items:start}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.bgt{font-family:var(--font-d);font-size:22px;font-weight:600;color:var(--gold2);margin-top:8px}
+.bgn{font-family:var(--font-m);font-size:9.5px;letter-spacing:.2em;color:var(--faint);margin-top:4px}
+.qrow{display:flex;align-items:center;gap:16px;padding:15px 16px;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;transition:.35s}
+.qrow .qi{width:46px;height:46px;border-radius:12px;background:rgba(245,192,68,.1);color:var(--gold);display:grid;place-items:center;font-size:20px;flex:none}
+.qrow b{display:block;font-size:14.5px}
+.qrow span{font-family:var(--font-m);font-size:11px;color:var(--muted)}
+.qrow .ar{margin-left:auto;color:var(--faint);transition:.3s;font-size:17px}
+.qrow:hover{border-color:rgba(245,192,68,.55);transform:translateX(6px)}
+.qrow:hover .ar{color:var(--gold)}
+.map{margin:22px 0;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.map svg{display:block;width:100%;height:auto}
+.pin-pulse{transform-box:fill-box;transform-origin:center;animation:pinp 2.2s infinite}
+@keyframes pinp{from{transform:scale(.35);opacity:.9}to{transform:scale(1.9);opacity:0}}
+.addr{display:flex;gap:12px;font-size:13.5px;color:var(--muted);line-height:1.7;margin-bottom:8px}
+.addr .ic{color:var(--gold);font-size:17px;margin-top:3px}
+.addr b{color:var(--txt)}
+.socials{display:flex;gap:12px;margin-top:20px}
+.soc{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--muted);transition:.35s;font-size:19px}
+.soc:hover{border-color:transparent;background:var(--grad);color:#fff;transform:translateY(-5px);box-shadow:0 14px 30px -12px rgba(255,46,99,.5)}
+
+/* ---- FOOTER ---- */
+footer{border-top:1px solid var(--line);margin-top:50px;overflow:hidden}
+.f-top{display:grid;grid-template-columns:1.2fr 2fr;gap:44px;padding:60px 0 44px}
+.f-brand p{color:var(--muted);font-size:13.5px;margin:16px 0 20px;max-width:34ch}
+.f-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.f-cols h5{font-family:var(--font-m);font-size:10px;letter-spacing:.3em;color:var(--gold);margin-bottom:16px;font-weight:400}
+.f-cols a{display:block;padding:5px 0;color:var(--muted);font-size:13.5px;transition:.3s}
+.f-cols a:hover{color:var(--gold2);transform:translateX(5px)}
+.f-cols .fc{color:var(--muted);font-size:13px;padding:5px 0;line-height:1.6}
+.f-cols .fc b{color:var(--txt)}
+.f-giant{font-family:var(--font-d);font-weight:600;font-size:clamp(58px,14.5vw,225px);line-height:.82;text-align:center;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.09);user-select:none;transform:translateY(14%);transition:-webkit-text-stroke-color .8s;cursor:default}
+.f-giant:hover{-webkit-text-stroke-color:rgba(245,192,68,.35)}
+.f-bot{border-top:1px solid var(--line);padding:20px 0;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-family:var(--font-m);font-size:10px;letter-spacing:.18em;color:var(--faint)}
+
+/* ---- FAB / TOASTS ---- */
+#fab{position:fixed;right:22px;bottom:22px;z-index:120;display:flex;flex-direction:column;gap:12px}
+.fab{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;position:relative;transition:transform .35s;font-size:24px}
+.fab:hover{transform:translateY(-5px) scale(1.05)}
+.fab-wa{background:linear-gradient(180deg,#3BE07A,#12A352);color:#04150B;box-shadow:0 14px 34px -10px rgba(37,211,102,.6)}
+.fab-wa::after{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(37,211,102,.7);animation:pulse 2.4s infinite}
+@keyframes pulse{to{transform:scale(1.65);opacity:0}}
+.fab-call{background:rgba(16,19,26,.85);border:1px solid rgba(245,192,68,.55);color:var(--gold);backdrop-filter:blur(10px);font-size:21px}
+.fab::before{content:attr(data-tip);position:absolute;right:70px;top:50%;transform:translateY(-50%);white-space:nowrap;font-family:var(--font-m);font-size:9.5px;letter-spacing:.18em;color:var(--gold2);padding:7px 12px;background:rgba(17,20,28,.9);border:1px solid rgba(245,192,68,.35);border-radius:99px;opacity:0;pointer-events:none;transition:.3s}
+.fab:hover::before{opacity:1}
+#toasts{position:fixed;top:90px;right:22px;z-index:400;display:flex;flex-direction:column;gap:10px;pointer-events:none}
+.toast{display:flex;gap:12px;align-items:flex-start;min-width:280px;max-width:360px;padding:14px 16px;border-radius:14px;background:rgba(17,20,28,.92);border:1px solid rgba(245,192,68,.4);backdrop-filter:blur(14px);box-shadow:0 20px 50px -20px rgba(0,0,0,.85);animation:tIn .45s cubic-bezier(.2,.9,.3,1.3) both;pointer-events:auto}
+.toast .ti{color:var(--gold);font-size:18px;margin-top:2px}
+.toast b{display:block;font-size:13.5px}
+.toast p{font-size:12px;color:var(--muted);margin-top:2px}
+.toast.out{animation:tOut .35s forwards}
+@keyframes tIn{from{opacity:0;transform:translateX(46px) scale(.9)}}
+@keyframes tOut{to{opacity:0;transform:translateX(46px)}}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1100px){
+  .stats-grid{grid-template-columns:1fr 1fr;gap:26px 0}
+  .stat:nth-child(3){border-left:0;padding-left:0}
+  .team{grid-template-columns:1fr 1fr;gap:34px 22px}
+  .tm:nth-child(n){margin-top:0}
+  .gear{grid-template-columns:1fr}
+  .g-show{position:static;max-width:420px}
+  .b-grid,.ct-grid,.ab-grid,.fa,.qe{grid-template-columns:1fr}
+  .b-receipt{position:static}
+  .drone-band{grid-template-columns:1fr}
+  .tiers{grid-template-columns:1fr;border-top:1px solid var(--line)}
+  .tier{border-left:0!important;padding:22px 6px 6px;border-top:1px solid var(--line)}
+  .tier:first-child{border-top:0}
+  .hot-chip{left:6px}
+}
+@media(max-width:900px){
+  .ritual{grid-template-columns:1fr;gap:26px}
+  .ritual.flip .r-media{order:0}
+  .r-num{top:-28px;left:0;right:auto}
+  .r-cta{margin-left:0}
+  .r-feats{grid-template-columns:1fr}
+  .vision{grid-template-columns:1fr}
+  .v-item{border-left:0;padding:26px 0 4px;border-top:1px solid var(--line)}
+  .v-item:first-child{border-top:0;padding-top:0}
+  .f-top{grid-template-columns:1fr;gap:34px;padding:44px 0 30px}
+  .f-cols{grid-template-columns:1fr 1fr}
+  .idx a{grid-template-columns:40px 1fr auto;gap:14px}
+  .idx .ar{display:none}
+  .v-cue{display:none}
+  footer{margin-bottom:70px}
+}
+@media(max-width:620px){
+  .stats-grid{grid-template-columns:1fr 1fr;gap:30px 18px}
+  .stat{padding:0;border-left:0}
+  .frow{grid-template-columns:1fr}
+  .hero-cta .btn{width:100%}
+  .qrow .qi{width:40px;height:40px;font-size:17px}
+  #toasts{left:14px;right:14px}
+  .toast{min-width:0}
+  .lb-p,.lb-n{display:none}
+  .r-buy{align-items:flex-start;flex-direction:column;gap:14px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= SVG ICON SPRITE ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="i-aperture" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"/></symbol>
+<symbol id="i-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+<symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+<symbol id="i-film" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 4v16M17 4v16M2 9h5M2 15h5M17 9h5M17 15h5"/></symbol>
+<symbol id="i-drone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9.5" y="9.5" width="5" height="5" rx="1.5"/><path d="M9.5 9.5 5.5 5.5M14.5 9.5l4-4M9.5 14.5l-4 4M14.5 14.5l4 4"/><circle cx="4.5" cy="4.5" r="2.4"/><circle cx="19.5" cy="4.5" r="2.4"/><circle cx="4.5" cy="19.5" r="2.4"/><circle cx="19.5" cy="19.5" r="2.4"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.88L18.18 21 12 17.77 5.82 21 7 14.15l-5-4.88 6.91-1.01z"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+<symbol id="i-chl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></symbol>
+<symbol id="i-chr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M22 2 11 13"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9 1.9-5.1Z"/><path d="M19 15l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7.7-1.8Z"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+<symbol id="i-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
+<symbol id="i-gem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9l4-6z"/><path d="M11 3 8 9l4 13 4-13-3-6M2 9h20"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+<symbol id="i-zoom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></symbol>
+<symbol id="i-crown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.56 3.27a.5.5 0 0 1 .88 0L15.39 8.9a1 1 0 0 0 1.52.29l4.27-3.66a.5.5 0 0 1 .8.52l-2.83 10.25a1 1 0 0 1-.96.73H5.81a1 1 0 0 1-.96-.73L2.02 6.05a.5.5 0 0 1 .8-.52l4.27 3.66a1 1 0 0 0 1.52-.29l2.95-5.63Z"/><path d="M5 21h14"/></symbol>
+<symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+<symbol id="i-ig" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.06 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.06-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.69-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.21-.56.48-.96.9-1.38.42-.42.82-.69 1.38-.9.42-.16 1.05-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13a5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm7.85-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44Z"/></symbol>
+<symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M24 12.07C24 5.44 18.63.07 12 .07S0 5.44 0 12.07c0 5.99 4.39 10.95 10.13 11.85v-8.38H7.08v-3.47h3.05V9.43c0-3.01 1.79-4.67 4.53-4.67 1.31 0 2.69.24 2.69.24v2.95h-1.51c-1.49 0-1.96.93-1.96 1.87v2.25h3.33l-.53 3.47h-2.8v8.38C19.61 23.02 24 18.06 24 12.07Z"/></symbol>
+<symbol id="i-yt" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.54 12 3.54 12 3.54s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81ZM9.55 15.57V8.43L15.82 12l-6.27 3.57Z"/></symbol>
+</defs>
+</svg>
+
+<!-- ================= SPLASH ================= -->
+<div id="splash">
+  <div class="sp-in">
+    <div class="sp-logo"><svg><use href="#i-aperture"/></svg></div>
+    <div class="sp-name" aria-label="PRAJANIKA">
+      <span style="--d:.15s">P</span><span style="--d:.21s">R</span><span style="--d:.27s">A</span><span style="--d:.33s">J</span><span style="--d:.39s">A</span><span style="--d:.45s">N</span><span style="--d:.51s">I</span><span style="--d:.57s">K</span><span style="--d:.63s">A</span>
+    </div>
+    <div class="sp-sub">STUDIO &nbsp;·&nbsp; CINEMA · STILLS · SKIES</div>
+    <div class="sp-bar"><div class="sp-fill"></div></div>
+    <div class="sp-row"><b id="spLine">CALIBRATING LENSES</b><span><span id="spPct">000</span>%</span></div>
+  </div>
+  <button class="sp-skip" id="spSkip">TAP TO SKIP</button>
+</div>
+
+<!-- custom cursor -->
+<div id="curR"></div><div id="curD"></div>
+
+<!-- ================= HEADER ================= -->
+<header id="hdr">
+  <div class="h-in">
+    <div class="logo" data-go="home" role="button" tabindex="0" aria-label="Prajanika Studio home">
+      <svg class="ic"><use href="#i-aperture"/></svg>
+      <span><span class="logo-t">PRAJANIKA</span><span class="logo-s">S T U D I O</span></span>
+    </div>
+    <nav class="nav">
+      <a href="#home" data-go="home" data-nav>Home</a>
+      <a href="#weddings" data-go="weddings" data-nav>Weddings</a>
+      <a href="#portfolio" data-go="portfolio" data-nav>Portfolio</a>
+      <a href="#builder" data-go="builder" data-nav>Builder</a>
+      <a href="#about" data-go="about" data-nav>About</a>
+      <a href="#contact" data-go="contact" data-nav>Contact</a>
+    </nav>
+    <div class="h-cta">
+      <a class="h-tel" href="tel:+919849012345"><svg class="ic"><use href="#i-phone"/></svg>+91 98490 12345</a>
+      <button class="btn gold sm" data-go="contact">Book Now</button>
+      <button id="burger" aria-label="Open menu"><svg class="ic"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<!-- mobile nav -->
+<div id="mnav">
+  <button id="mnavClose" aria-label="Close menu"><svg class="ic"><use href="#i-x"/></svg></button>
+  <a href="#home" data-go="home">Home<span class="n">01</span></a>
+  <a href="#weddings" data-go="weddings">Weddings<span class="n">02</span></a>
+  <a href="#portfolio" data-go="portfolio">Portfolio<span class="n">03</span></a>
+  <a href="#builder" data-go="builder">Builder<span class="n">04</span></a>
+  <a href="#about" data-go="about">About<span class="n">05</span></a>
+  <a href="#contact" data-go="contact">Contact<span class="n">06</span></a>
+  <div class="m-cta">
+    <button class="btn gold" data-go="contact">Book Now</button>
+    <a class="btn ghost" target="_blank" rel="noopener" href="https://wa.me/919849012345?text=Namaste%20Prajanika%20Studio!"><svg class="ic"><use href="#i-wa"/></svg>WhatsApp</a>
+  </div>
+</div>
+
+<main>
+<!-- ============================================================ HOME -->
+<section class="page" id="home">
+  <div class="hero">
+    <div class="hero-bg">
+      <img src="https://picsum.photos/seed/prajanika-hero1/1600/900.jpg" alt="Wedding moment">
+      <img src="https://picsum.photos/seed/prajanika-hero2/1600/900.jpg" alt="Ceremony moment">
+      <img src="https://picsum.photos/seed/prajanika-hero3/1600/900.jpg" alt="Aerial moment">
+      <img src="https://picsum.photos/seed/prajanika-hero4/1600/900.jpg" alt="Portrait moment">
+    </div>
+    <div class="hero-scrim"></div>
+    <div class="hero-in">
+      <p class="overline h-fade" style="--d:.25s">Photography · Cinema · Aerial — since 2016</p>
+      <h1 class="h1" aria-label="Where light becomes legacy.">
+        <span class="lw"><i style="--d:.35s">Where</i></span>
+        <span class="lw"><i style="--d:.44s">light</i></span>
+        <span class="lw"><i style="--d:.53s">becomes</i></span>
+        <span class="lw"><i class="gw" style="--d:.62s">legacy.</i></span>
+      </h1>
+      <p class="hero-sub h-fade" style="--d:.55s">Prajanika Studio crafts premium wedding photography, cinematic 4K films and aerial production across South India. Every ritual covered like cinema — every frame built to outlive us.</p>
+      <div class="hero-cta h-fade" style="--d:.7s">
+        <button class="btn gold" data-go="weddings">Explore Packages <svg class="ic"><use href="#i-arrow"/></svg></button>
+        <button class="btn ghost" data-go="builder">Instant Booking</button>
+      </div>
+    </div>
+    <div class="h-rec h-fade" style="--d:.8s"><span class="dot"></span>REC <span id="tc">00:00:00:00</span> · 4K 24FPS</div>
+    <div class="v-cue h-fade" style="--d:.9s">SCROLL THE REEL</div>
+    <div class="hero-mq h-fade" style="--d:1s">
+      <div class="mq-track" id="mqTrack">
+        <span>SONY FX3 · 10-BIT 4K</span><i></i><span>420+ WEDDINGS COVERED</span><i></i><span>DJI MAVIC 3 PRO AERIAL</span><i></i><span>SAME-DAY INSTAGRAM REELS</span><i></i><span>FLUSH-MOUNT HEIRLOOM ALBUMS</span><i></i><span>DAVINCI CERTIFIED COLORISTS</span><i></i><span>EST. 2016 · HYDERABAD</span><i></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- counters -->
+  <div class="sec" id="stats">
+    <div class="wrap">
+      <p class="overline rv">The studio in numbers</p>
+      <h2 class="t rv d1">Nine years, four hundred <em>"I do's."</em></h2>
+      <div class="stats-grid">
+        <div class="stat gold rv d1"><svg class="ic"><use href="#i-clock"/></svg><div class="num" data-count="9" data-suf="+">0</div><div class="lbl">Years behind the lens</div><p>Established 2016, still obsessed.</p></div>
+        <div class="stat rv d2"><svg class="ic"><use href="#i-heart"/></svg><div class="num" data-count="420" data-suf="+">0</div><div class="lbl">Weddings & ceremonies</div><p>Across Andhra, Telangana & beyond.</p></div>
+        <div class="stat rv d3"><svg class="ic"><use href="#i-users"/></svg><div class="num" data-count="1800" data-suf="+">0</div><div class="lbl">Happy clients</div><p>And every one of their mothers.</p></div>
+        <div class="stat rv d4"><svg class="ic"><use href="#i-award"/></svg><div class="num" data-count="26" data-suf="">0</div><div class="lbl">Awards & features</div><p> incl. 3 national wedding films.</p></div>
+      </div>
+      <div class="shoton rv">
+        <span class="sl">SHOT ON —</span>
+        <span class="gchip"><svg class="ic"><use href="#i-video"/></svg>SONY FX3 CINEMA LINE</span>
+        <span class="gchip"><svg class="ic"><use href="#i-aperture"/></svg>FE 24-70 GM II</span>
+        <span class="gchip"><svg class="ic"><use href="#i-drone"/></svg>DJI MAVIC 3 PRO</span>
+        <span class="gchip"><svg class="ic"><use href="#i-sun"/></svg>APUTURE 600D</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- index -->
+  <div class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="idx rv">
+        <a href="#weddings" data-go="weddings"><span class="n">01</span><span><span class="tt">Weddings & Rituals</span><span class="dd">Five ceremonies, one seamless story — pre-wedding to reception.</span></span><span class="ar"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+        <a href="#portfolio" data-go="portfolio" data-filter="drone"><span class="n">02</span><span><span class="tt">Aerial & Drone Visuals</span><span class="dd">Entries your guests will never forget — flown by certified pilots.</span></span><span class="ar"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+        <a href="#weddings" data-go="weddings"><span class="n">03</span><span><span class="tt">Films & Heirloom Albums</span><span class="dd">The movie, the reels, the leather-bound keepsake.</span></span><span class="ar"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+        <a href="#builder" data-go="builder"><span class="n">04</span><span><span class="tt">Build Your Package</span><span class="dd">Price your story in under a minute — live, honest math.</span></span><span class="ar"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- before / after -->
+  <div class="sec" style="border-top:1px solid var(--line)">
+    <div class="wrap">
+      <p class="overline rv">The Prajanika grade</p>
+      <h2 class="t rv d1">Raw is real. <em>Graded is forever.</em></h2>
+      <p class="lead rv d2">Same frame, two lives. One straight out of camera — one through our DaVinci color suite.</p>
+      <div class="ba-tabs rv d2" id="baTabs"></div>
+      <div class="ba rv" id="ba" tabindex="0" aria-label="Before and after comparison. Use arrow keys.">
+        <img class="graded" id="baG" src="https://picsum.photos/seed/prajanika-ba1/1600/900.jpg" alt="Color graded photo">
+        <div class="veil"></div>
+        <div class="raw"><img id="baR" src="https://picsum.photos/seed/prajanika-ba1/1600/900.jpg" alt="Raw unedited photo"></div>
+        <div class="bar"></div>
+        <div class="grab"><svg class="ic"><use href="#i-chl"/></svg><svg class="ic"><use href="#i-chr"/></svg></div>
+        <span class="tag l">RAW · SOOC</span>
+        <span class="tag r">PRAJANIKA GRADE</span>
+      </div>
+      <p class="ba-hint">HOVER OR DRAG TO COMPARE — ARROW KEYS WORK TOO</p>
+    </div>
+  </div>
+
+  <!-- quick estimator -->
+  <div class="sec" style="border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="qe neon lift rv">
+        <div>
+          <p class="overline">Quick estimator</p>
+          <h3>A ballpark in ten seconds.</h3>
+          <p class="qp">Set three things; we do the math. Then refine every last detail in the full package builder — drone, crew, album and all.</p>
+          <div class="qe-links">
+            <button class="btn gold sm" data-go="builder" data-prefill="qe">Refine in the full builder <svg class="ic"><use href="#i-arrow"/></svg></button>
+            <a class="btn ghost sm" id="qeWa" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Get quote on WhatsApp</a>
+          </div>
+        </div>
+        <div>
+          <div class="fld"><label>Event type</label>
+            <div class="sel"><select id="qeEvent"></select></div>
+          </div>
+          <div class="qe-row"><span class="ql">Coverage days<small>EACH DAY, DAWN TO SEND-OFF</small></span>
+            <span class="step"><button id="qeM" aria-label="Fewer days"><svg class="ic"><use href="#i-minus"/></svg></button><span class="v"><span id="qeV">1</span><small>DAYS</small></span><button id="qeP" aria-label="More days"><svg class="ic"><use href="#i-plus"/></svg></button></span>
+          </div>
+          <div class="qe-row"><span class="ql">Drone coverage<small>4K AERIAL ENTRY + PANORAMA</small></span>
+            <button class="sw" id="qeDrone" aria-pressed="false" aria-label="Toggle drone coverage"></button>
+          </div>
+          <div class="qe-out"><strong id="qeOut">₹75,000</strong><em>APPROX · ±10% AFTER A QUICK CALL</em></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- reviews -->
+  <div class="sec" style="border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div style="text-align:center"><p class="overline rv" style="justify-content:center">Word of mouth</p>
+      <h2 class="t rv d1">Couples who became <em>family.</em></h2></div>
+      <p class="rev-meta rv d2">4.9 / 5 AVERAGE · ACROSS 320+ VERIFIED REVIEWS</p>
+      <div class="rev rv d2" id="revBox">
+        <div class="stars" id="revStars"></div>
+        <blockquote id="revQ"></blockquote>
+        <div class="who" id="revWho"></div>
+        <div class="rev-nav">
+          <button class="rbtn" id="revPrev" aria-label="Previous review"><svg class="ic"><use href="#i-chl"/></svg></button>
+          <div class="dots" id="revDots"></div>
+          <button class="rbtn" id="revNext" aria-label="Next review"><svg class="ic"><use href="#i-chr"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="sec cta-band">
+    <div class="wrap">
+      <p class="overline rv">Ready when you are</p>
+      <h2 class="t rv d1">Let's make something <em>unforgettable.</em></h2>
+      <div class="row rv d2">
+        <button class="btn gold" data-go="contact">Book Your Date <svg class="ic"><use href="#i-cal"/></svg></button>
+        <a class="btn ghost" target="_blank" rel="noopener" href="https://wa.me/919849012345?text=Namaste%20Prajanika%20Studio!%20I%20want%20to%20plan%20my%20wedding%20coverage."><svg class="ic"><use href="#i-wa"/></svg>Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ WEDDINGS -->
+<section class="page" id="weddings">
+  <div class="phead">
+    <div class="wrap">
+      <p class="overline rv">Services & pricing</p>
+      <h1 class="rv d1">Weddings & <em>ceremonies</em></h1>
+      <p class="lead rv d2">Every package below includes full editing, cinematic colour grading and a private online gallery. Drone coverage bolts onto any ritual — flip the switch below a package to watch the price move.</p>
+      <div class="trust rv d3">
+        <span class="tch2"><svg class="ic"><use href="#i-check"/></svg>NO HIDDEN COSTS</span>
+        <span class="tch2"><svg class="ic"><use href="#i-check"/></svg>IN-CITY TRAVEL INCLUDED</span>
+        <span class="tch2"><svg class="ic"><use href="#i-check"/></svg>50% BLOCKS YOUR DATE</span>
+        <span class="tch2"><svg class="ic"><use href="#i-check"/></svg>PREVIEWS WITHIN 72 HOURS</span>
+      </div>
+    </div>
+  </div>
+  <div class="sec" style="padding-top:10px"><div class="wrap" id="rituals"></div></div>
+
+  <!-- drone band -->
+  <div class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="drone-band neon rv">
+        <div>
+          <p class="overline">Bolt-on · any ritual</p>
+          <h3 class="t">The sky is your <em>red carpet.</em></h3>
+          <p>4K aerial couple entries, slow venue panorama orbits and high-altitude group visuals that no ground camera can ever reach. Flown by DGCA-certified pilots with full insurance.</p>
+          <div class="db-price mono">₹8,000 – ₹15,000 · ON EVERY PACKAGE ABOVE</div>
+          <button class="btn gold sm" data-go="builder" data-event="wedding">Price it with drone <svg class="ic"><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="tiers">
+          <div class="tier">
+            <span class="tn mono">ESSENTIAL · ₹8,000</span>
+            <ul>
+              <li><svg class="ic"><use href="#i-check"/></svg>4K aerial couple entry shot</li>
+              <li><svg class="ic"><use href="#i-check"/></svg>One 10-minute flight window</li>
+              <li><svg class="ic"><use href="#i-check"/></svg>5 graded aerial stills</li>
+            </ul>
+          </div>
+          <div class="tier">
+            <span class="hot-chip">MOST CHOSEN</span>
+            <span class="tn mono">SIGNATURE · ₹12,000</span>
+            <ul>
+              <li><svg class="ic"><use href="#i-check"/></svg>Everything in Essential</li>
+              <li><svg class="ic"><use href="#i-check"/></svg>Venue panorama orbit</li>
+              <li><svg class="ic"><use href="#i-check"/></svg>Two flight windows + vertical reels</li>
+            </ul>
+          </div>
+          <div class="tier">
+            <span class="tn mono">ELITE · ₹15,000</span>
+            <ul>
+              <li><svg class="ic"><use href="#i-check"/></svg>Everything in Signature</li>
+              <li><svg class="ic"><use href="#i-check"/></svg>High-altitude full-group frames</li>
+              <li><svg class="ic"><use href="#i-check"/></svg>FPV-style passes + raw masters</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- films & albums -->
+  <div class="sec" style="padding-top:0">
+    <div class="wrap">
+      <p class="overline rv">After the confetti</p>
+      <h2 class="t rv d1">The film &amp; the <em>heirloom.</em></h2>
+      <div class="fa">
+        <div class="fa-panel neon lift rv d1">
+          <div class="fa-ic"><svg class="ic"><use href="#i-film"/></svg></div>
+          <h3>Cinematic Teasers & 4K Wedding Films</h3>
+          <p class="fp">Your day, cut like a feature. Scored, graded, and mastered in 4K 10-bit.</p>
+          <ul>
+            <li><svg class="ic"><use href="#i-check"/></svg>Feature-length wedding film (10–20 min)</li>
+            <li><svg class="ic"><use href="#i-check"/></svg>60–90 second cinematic teaser</li>
+            <li><svg class="ic"><use href="#i-check"/></svg>Same-day edit Instagram reels</li>
+            <li><svg class="ic"><use href="#i-check"/></svg>4K master files on engraved SSD</li>
+            <li><svg class="ic"><use href="#i-check"/></svg>Music licensing handled by us</li>
+          </ul>
+          <div class="fa-foot"><span class="pr"><small>FROM</small>₹65,000</small></span><button class="btn gold sm" data-go="builder" data-event="fullstory">Add to package</button></div>
+        </div>
+        <div class="fa-panel neon lift rv d2">
+          <div class="fa-ic"><svg class="ic"><use href="#i-gem"/></svg></div>
+          <h3>Premium Printed Albums</h3>
+          <p class="fp">Objects your grandchildren will hold. Hand-bound in our Hyderabad atelier.</p>
+          <ul>
+            <li><svg class="ic"><use href="#i-check"/></svg>Flush-mount, handcrafted leather binding</li>
+            <li><svg class="ic"><use href="#i-check"/></svg>Lay-flat spreads on archival museum paper</li>
+            <li><svg class="ic"><use href="#i-check"/></svg>Wooden keepsake box with engraved USB</li>
+            <li><svg class="ic"><use href="#i-check"/></svg>10-year secure cloud gallery</li>
+            <li><svg class="ic"><use href="#i-check"/></svg>Parent &amp; mini copies available</li>
+          </ul>
+          <div class="fa-foot"><span class="pr"><small>FROM</small>₹18,000</span><button class="btn gold sm" data-go="builder">Add to package</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec cta-band">
+    <div class="wrap">
+      <p class="overline rv">Still deciding?</p>
+      <h2 class="t rv d1">Build it yourself — <em>we'll keep it honest.</em></h2>
+      <div class="row rv d2"><button class="btn gold" data-go="builder">Open the Package Builder <svg class="ic"><use href="#i-arrow"/></svg></button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PORTFOLIO -->
+<section class="page" id="portfolio">
+  <div class="phead">
+    <div class="wrap">
+      <p class="overline rv">Selected work</p>
+      <h1 class="rv d1">The <em>portfolio</em></h1>
+      <p class="lead rv d2">Eighteen frames from four hundred weddings. Click any image for the fullscreen viewer — zoom in, the grain is real.</p>
+      <div class="pf-tabs rv d3" id="pfTabs"></div>
+      <p class="pf-count" id="pfCount"></p>
+    </div>
+  </div>
+  <div class="sec" style="padding-top:0">
+    <div class="wrap"><div id="pgrid"></div></div>
+  </div>
+</section>
+
+<!-- ============================================================ BUILDER -->
+<section class="page" id="builder">
+  <div class="phead">
+    <div class="wrap">
+      <p class="overline rv">Interactive estimator</p>
+      <h1 class="rv d1">Build your <em>package</em></h1>
+      <p class="lead rv d2">Mix, toggle and tweak — the total updates live, line by line. No hidden line items, ever. When it feels right, send it straight to us on WhatsApp.</p>
+    </div>
+  </div>
+  <div class="sec" style="padding-top:10px">
+    <div class="wrap">
+      <div class="b-grid">
+        <div>
+          <div class="b-step rv"><div class="b-lab"><span class="bn">01</span><span class="bt">Choose your event</span><span class="hint" id="bHint"></span></div><div class="chips" id="bEvent"></div></div>
+          <div class="b-step rv d1"><div class="b-lab"><span class="bn">02</span><span class="bt">Coverage days</span></div>
+            <div class="b-days"><span class="step"><button id="bDayM" aria-label="Fewer days"><svg class="ic"><use href="#i-minus"/></svg></button><span class="v"><span id="bDayV">2</span><small>DAYS</small></span><button id="bDayP" aria-label="More days"><svg class="ic"><use href="#i-plus"/></svg></button></span><span class="dn">Dawn to send-off, every single day.</span></div>
+          </div>
+          <div class="b-step rv d1"><div class="b-lab"><span class="bn">03</span><span class="bt">Cinematographers on the floor</span></div><div class="chips" id="bCrew"></div></div>
+          <div class="b-step rv d2"><div class="b-lab"><span class="bn">04</span><span class="bt">Keepsake album</span></div><div class="chips" id="bAlbum"></div></div>
+          <div class="b-step rv d2"><div class="b-lab"><span class="bn">05</span><span class="bt">Drone coverage</span></div><div class="chips" id="bDrone"></div></div>
+          <div class="b-step rv d3" style="border-bottom:0"><div class="b-lab"><span class="bn">06</span><span class="bt">Make it extra</span></div><div class="chips" id="bExtras"></div></div>
+        </div>
+        <aside class="b-receipt neon rv d1" id="bReceipt">
+          <p class="overline">Your estimate</p>
+          <div class="b-lines" id="bLines"></div>
+          <div class="b-total"><span>Estimated total</span><strong id="bTotal">₹0</strong></div>
+          <p class="b-note">INDICATIVE ONLY · GST AS APPLICABLE · FINAL QUOTE AFTER A 10-MIN DISCOVERY CALL · TRAVEL WITHIN CITY INCLUDED</p>
+          <div class="b-actions">
+            <a class="btn wa" id="bWa" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg>Send on WhatsApp</a>
+            <button class="btn ghost" id="bCb">Request a callback instead</button>
+          </div>
+          <form class="cb-form" id="cbForm" hidden>
+            <input id="cbName" type="text" placeholder="Your name" autocomplete="name">
+            <input id="cbPhone" type="tel" placeholder="Phone number" autocomplete="tel">
+            <input id="cbDate" type="date" title="Preferred date">
+            <button class="btn gold sm" type="submit"><svg class="ic"><use href="#i-send"/></svg>Send callback request</button>
+          </form>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ ABOUT -->
+<section class="page" id="about">
+  <div class="phead">
+    <div class="wrap">
+      <p class="overline rv">Since 2016</p>
+      <h1 class="rv d1">The people behind the <em>frames</em></h1>
+    </div>
+  </div>
+  <div class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="ab-grid">
+        <div class="ab-imgs rv">
+          <div class="ab-i1"><img loading="lazy" src="https://picsum.photos/seed/prajanika-about1/900/700.jpg" alt="Studio at work"></div>
+          <div class="ab-i2"><img loading="lazy" src="https://picsum.photos/seed/prajanika-about2/700/800.jpg" alt="Creative direction"></div>
+        </div>
+        <div class="ab-txt">
+          <p class="pull rv">"We started with one borrowed camera and a stubborn belief — that Indian weddings deserve films as cinematic as <em>the love they celebrate.</em>"</p>
+          <p class="rv d1">Prajanika Studio began in a one-room Hyderabad office in 2016, shooting haldi ceremonies for friends who couldn't afford "real" photographers. Word travelled. Nine years later we're a twelve-person crew covering destination weddings across four states — and we still turn down work when we can't give it our full attention.</p>
+          <p class="rv d2">The name comes from the Telugu "prajna" — awareness, presence. Because that's the whole craft: being fully present for moments that will never happen again.</p>
+        </div>
+      </div>
+      <div class="vision">
+        <div class="v-item rv"><span class="vn">01</span><h4>Craft over volume</h4><p>We cap ourselves at 40 weddings a year. Every frame gets our full attention, or we don't take the booking.</p></div>
+        <div class="v-item rv d1"><span class="vn">02</span><h4>Cinema, first</h4><p>Stills that think like shots. Films cut like trailers. Every deliverable is directed, never merely "covered."</p></div>
+        <div class="v-item rv d2"><span class="vn">03</span><h4>Built to outlive us</h4><p>Archival prints, leather albums, 4K masters on redundant drives. Your grandchildren should hold this work one day.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="sec" style="border-top:1px solid var(--line)">
+    <div class="wrap">
+      <p class="overline rv">The team</p>
+      <h2 class="t rv d1">Four pairs of eyes, <em>one instinct.</em></h2>
+      <div class="team" id="team"></div>
+    </div>
+  </div>
+  <div class="sec" style="border-top:1px solid var(--line)">
+    <div class="wrap">
+      <p class="overline rv">The arsenal</p>
+      <h2 class="t rv d1">Gear we trust with <em>your once-in-a-lifetime.</em></h2>
+      <div class="gear">
+        <div class="g-show rv d1"><img id="gearImg" src="https://picsum.photos/seed/g1/800/1000.jpg" alt="Gear showcase"><span class="gl" id="gearLbl">SONY FX3 CINEMA LINE</span></div>
+        <div class="g-rows rv d2" id="gearRows"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ CONTACT -->
+<section class="page" id="contact">
+  <div class="phead">
+    <div class="wrap">
+      <p class="overline rv">Booking & enquiries</p>
+      <h1 class="rv d1">Start the <em>conversation</em></h1>
+      <p class="lead rv d2">Tell us when, where and how big — we reply within four working hours. On WhatsApp, usually within minutes.</p>
+    </div>
+  </div>
+  <div class="sec" style="padding-top:10px">
+    <div class="wrap ct-grid">
+      <form class="neon rv" id="ctForm" style="padding:clamp(26px,3.5vw,44px);border-radius:22px" novalidate>
+        <div class="frow">
+          <div class="fld"><label>Your name</label><input id="ctName" type="text" placeholder="Full name" autocomplete="name"></div>
+          <div class="fld"><label>Phone</label><input id="ctPhone" type="tel" placeholder="+91 ..." autocomplete="tel"></div>
+        </div>
+        <div class="frow">
+          <div class="fld"><label>Email</label><input id="ctEmail" type="email" placeholder="you@example.com" autocomplete="email"></div>
+          <div class="fld"><label>Event date</label><input id="ctDate" type="date"></div>
+        </div>
+        <div class="frow">
+          <div class="fld"><label>Event type</label><div class="sel"><select id="ctEvent"></select></div></div>
+          <div class="fld"><label>Budget range</label>
+            <input type="range" id="ctBudget" min="50000" max="500000" step="25000" value="150000">
+            <div class="bgt" id="ctBudgetOut">₹1,50,000</div>
+            <div class="bgn">DRAG TO SET YOUR COMFORT RANGE</div>
+          </div>
+        </div>
+        <div class="fld"><label>Anything else?</label><textarea id="ctMsg" placeholder="Venues, rituals, ideas, references..."></textarea></div>
+        <button class="btn gold" type="submit" style="width:100%"><svg class="ic"><use href="#i-send"/></svg>Send Enquiry</button>
+      </form>
+      <div>
+        <a class="qrow rv" href="tel:+919849012345"><span class="qi"><svg class="ic"><use href="#i-phone"/></svg></span><span><b>Call the studio</b><span>+91 98490 12345 · MON–SAT 10–19</span></span><span class="ar"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+        <a class="qrow rv d1" href="https://wa.me/919849012345?text=Namaste%20Prajanika%20Studio!%20I%27d%20like%20to%20chat%20about%20my%20wedding%20plans." target="_blank" rel="noopener"><span class="qi"><svg class="ic"><use href="#i-wa"/></svg></span><span><b>WhatsApp us</b><span>MEDIAN REPLY · 12 MINUTES</span></span><span class="ar"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+        <a class="qrow rv d2" href="mailto:hello@prajanika.studio"><span class="qi"><svg class="ic"><use href="#i-mail"/></svg></span><span><b>Write to us</b><span>hello@prajanika.studio</span></span><span class="ar"><svg class="ic"><use href="#i-arrow"/></svg></span></a>
+        <div class="map rv d2">
+          <svg viewBox="0 0 640 360" role="img" aria-label="Stylized map to Prajanika Studio, Jubilee Hills, Hyderabad">
+            <defs><pattern id="grd" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="#1A2130"/></pattern></defs>
+            <rect width="640" height="360" fill="#0D1017"/><rect width="640" height="360" fill="url(#grd)"/>
+            <path d="M0 90 H640" stroke="#151B27" stroke-width="18"/>
+            <path d="M0 220 H640" stroke="#141926" stroke-width="30"/>
+            <path d="M0 220 H640" stroke="#20283A" stroke-width="2" stroke-dasharray="14 10"/>
+            <path d="M140 0 V360" stroke="#151B27" stroke-width="16"/>
+            <path d="M420 0 V360" stroke="#161C29" stroke-width="20"/>
+            <path d="M300 60 L360 220" stroke="#131824" stroke-width="12"/>
+            <path d="M480 220 L560 300" stroke="#131824" stroke-width="10"/>
+            <rect x="470" y="110" width="120" height="70" rx="10" fill="#101922"/>
+            <path d="M40 320 L40 220 L420 220 L420 96" stroke="url(#routeGrad)" stroke-width="3" fill="none" stroke-linejoin="round"/>
+            <defs><linearGradient id="routeGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3D5BFF"/><stop offset=".5" stop-color="#FF7A1A"/><stop offset="1" stop-color="#F5C044"/></linearGradient></defs>
+            <circle class="pin-pulse" cx="420" cy="96" r="22" fill="none" stroke="#F5C044" stroke-width="1.5"/>
+            <circle cx="420" cy="96" r="8" fill="#F5C044"/>
+            <circle cx="420" cy="96" r="3" fill="#0A0C10"/>
+            <rect x="300" y="42" width="168" height="26" rx="13" fill="#11141C" stroke="rgba(245,192,68,.4)"/>
+            <text x="384" y="59" text-anchor="middle" font-family="Space Mono,monospace" font-size="10" letter-spacing="2" fill="#FFE29A">PRAJANIKA STUDIO</text>
+            <text x="18" y="340" font-family="Space Mono,monospace" font-size="9" letter-spacing="2" fill="#5C6370">17.4239° N · 78.3478° E · JUBILEE HILLS</text>
+          </svg>
+        </div>
+        <div class="addr rv"><svg class="ic"><use href="#i-pin"/></svg><span><b>12-C, Film Lane, Jubilee Hills,</b><br>Hyderabad, Telangana 500033<br>Visits by appointment · Mon–Sat 10:00–19:00</span></div>
+        <div class="socials">
+          <a class="soc" href="https://www.instagram.com/prajanika.studio" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic"><use href="#i-ig"/></svg></a>
+          <a class="soc" href="https://www.facebook.com/prajanika.studio" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ic"><use href="#i-fb"/></svg></a>
+          <a class="soc" href="https://www.youtube.com/@prajanikastudio" target="_blank" rel="noopener" aria-label="YouTube"><svg class="ic"><use href="#i-yt"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap f-top">
+    <div class="f-brand">
+      <div class="logo"><svg class="ic"><use href="#i-aperture"/></svg><span><span class="logo-t">PRAJANIKA</span><span class="logo-s">S T U D I O</span></span></div>
+      <p>Wedding cinema, photography and aerial production. Crafted frame by frame in Hyderabad since 2016.</p>
+      <div class="socials" style="margin-top:14px">
+        <a class="soc" href="https://www.instagram.com/prajanika.studio" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic"><use href="#i-ig"/></svg></a>
+        <a class="soc" href="https://www.facebook.com/prajanika.studio" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ic"><use href="#i-fb"/></svg></a>
+        <a class="soc" href="https://www.youtube.com/@prajanikastudio" target="_blank" rel="noopener" aria-label="YouTube"><svg class="ic"><use href="#i-yt"/></svg></a>
+      </div>
+    </div>
+    <div class="f-cols">
+      <div><h5>EXPLORE</h5><a href="#home" data-go="home">Home</a><a href="#weddings" data-go="weddings">Weddings & Rituals</a><a href="#portfolio" data-go="portfolio">Portfolio</a><a href="#about" data-go="about">About Us</a></div>
+      <div><h5>PLAN</h5><a href="#builder" data-go="builder">Package Builder</a><a href="#contact" data-go="contact">Contact & Booking</a><a href="tel:+919849012345">+91 98490 12345</a><a href="mailto:hello@prajanika.studio">hello@prajanika.studio</a></div>
+      <div><h5>STUDIO</h5><div class="fc"><b>12-C, Film Lane, Jubilee Hills,</b><br>Hyderabad, Telangana 500033<br>Mon–Sat · 10:00–19:00</div></div>
+    </div>
+  </div>
+  <div class="f-giant" aria-hidden="true">PRAJANIKA</div>
+  <div class="wrap f-bot"><span>© <span id="year">2025</span> PRAJANIKA STUDIO · ALL FRAMES RESERVED</span><span>MADE WITH OBSESSIVE ATTENTION, IN HYDERABAD</span></div>
+</footer>
+
+<!-- floating actions / lightbox / toasts -->
+<div id="fab">
+  <a class="fab fab-call" data-tip="CALL THE STUDIO" href="tel:+919849012345" aria-label="Call"><svg class="ic"><use href="#i-phone"/></svg></a>
+  <a class="fab fab-wa" data-tip="CHAT ON WHATSAPP" href="https://wa.me/919849012345?text=Namaste%20Prajanika%20Studio!" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ic"><use href="#i-wa"/></svg></a>
+</div>
+
+<div id="lb" aria-hidden="true">
+  <div class="lb-z">CLICK TO ZOOM · DRAG TO PAN · ESC TO CLOSE</div>
+  <button class="lbc lb-x" id="lbX" aria-label="Close"><svg class="ic"><use href="#i-x"/></svg></button>
+  <button class="lbc lb-p" id="lbP" aria-label="Previous"><svg class="ic"><use href="#i-chl"/></svg></button>
+  <button class="lbc lb-n" id="lbN" aria-label="Next"><svg class="ic"><use href="#i-chr"/></svg></button>
+  <div class="lb-stage" id="lbStage"><img id="lbImg" alt=""></div>
+  <div class="lb-cap"><span><span class="c" id="lbCat"></span><span class="t" id="lbTitle"></span></span><span class="lb-count" id="lbCount"></span></div>
+</div>
+
+<div id="toasts"></div>
+
+<script>
+/* ================= HELPERS & DATA ================= */
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const PHONE='919849012345';
+const fmt=n=>'₹'+Math.round(n).toLocaleString('en-IN');
+const wa=t=>`https://wa.me/${PHONE}?text=${encodeURIComponent(t)}`;
+
+const EVENTS=[
+  {id:'prewed',name:'Pre-Wedding / Save-the-Date',perDay:30000},
+  {id:'haldi',name:'Haldi & Mehendi',perDay:25000},
+  {id:'sangeet',name:'Sangeet & Cocktail Night',perDay:28000},
+  {id:'wedding',name:'Traditional Wedding Day',perDay:75000},
+  {id:'reception',name:'Reception & Gala Evening',perDay:45000},
+  {id:'fullstory',name:'Multi-Day Full Story',perDay:68000}];
+const CREW=[{n:2,note:'INTIMATE & QUIET',add:0},{n:3,note:'+₹12,000 / DAY',add:12000},{n:4,note:'+₹22,000 / DAY',add:22000}];
+const ALBUMS=[{id:'none',name:'No Album',price:0},{id:'coffee',name:'Premium Coffee-Table',price:18000},{id:'flush',name:'Flush-Mount Leather 12×18',price:35000},{id:'heirloom',name:'Heirloom Leather + Wooden USB Box',price:52000}];
+const DRONES=[{id:'off',name:'No Drone',price:0},{id:'essential',name:'Essential Aerial',price:8000},{id:'signature',name:'Signature Aerial',price:12000},{id:'elite',name:'Elite Aerial',price:15000}];
+const EXTRAS=[{id:'reels',name:'Same-Day Instagram Reels',price:9500},{id:'film',name:'Cinematic 4K Film Master',price:65000},{id:'travel',name:'Outstation Travel & Stay',price:15000}];
+
+const RITUALS=[
+ {id:'prewed',num:'01',tag:'PRE-WEDDING',img:'prajanika-r1',price:35000,dur:'1 DAY · 2 LOOKS',
+  title:'Pre-Wedding & Save-the-Date Shoots',
+  desc:'Golden-hour storytelling at handpicked scenic locations — built around you as a couple, not a template.',
+  features:['Outdoor scenic & heritage locations','Multi-outfit concept boards','Cinematic teaser reel + Save-the-Date','50+ artistically graded stills','48-hour social media sneak peek']},
+ {id:'haldi',num:'02',tag:'HALDI · MEHENDI',img:'prajanika-r2',price:28000,dur:'HALF-DAY · FULL RITUAL',
+  title:'Haldi & Mehendi Rituals',
+  desc:'The brightest, loudest, most joyfully messy day of the wedding week — captured in glorious, saturated colour.',
+  features:['Vibrant sunshine colour grade','Candid bursts & family portraits','Detail set — decor, jewellery, mehendi','10-second vertical story edits','Same-week delivery gallery']},
+ {id:'sangeet',num:'03',tag:'SANGEET · COCKTAIL',img:'prajanika-r3',price:32000,dur:'EVENING · TILL LAST SONG',
+  title:'Sangeet & Cocktail Nights',
+  desc:'Haze, lasers, dance floors at 1/8000s and everyone at their glamorous best. We shoot parties like music videos.',
+  features:['Stage lighting & haze capture','High-speed dance-floor photography','Full party coverage till the last song','DJ & performance close-ups','After-midnight afterparty add-on']},
+ {id:'wedding',num:'04',tag:'THE WEDDING DAY',img:'prajanika-r4',price:95000,dur:'FULL DAY · DAWN TO SEND-OFF',
+  title:'The Traditional Wedding Day',
+  desc:'The main event. A dedicated candid and traditional duo, covering every ritual without staging a single moment.',
+  features:['Full-day dawn-to-send-off coverage','Bridal & groom portrait sessions','Every ritual, every emotion, unposed','60-page preview within 72 hours','Dedicated candid + traditional duo']},
+ {id:'reception',num:'05',tag:'RECEPTION · GALA',img:'prajanika-r5',price:55000,dur:'EVENING · RED-CARPET',
+  title:'Reception & Gala Evening',
+  desc:'Stage sets, ambient decor and red-carpet style portraits — your gala, shot like a premiere.',
+  features:['Stage & group setup direction','Ambient decor & table details','Luxury red-carpet style portraits','Same-night LED wall slideshow','Grand wide-angle stage frames']}];
+
+const TIER={essential:{n:'Essential',p:8000,d:'4K AERIAL ENTRY SHOT · ONE FLIGHT WINDOW'},signature:{n:'Signature',p:12000,d:'+ VENUE PANORAMA ORBIT · TWO FLIGHT WINDOWS'},elite:{n:'Elite',p:15000,d:'+ HIGH-ALTITUDE GROUP FRAMES · FPV PASSES'}};
+
+const PF_CATS={all:'All',wedding:'Weddings',prewed:'Pre-Wedding',haldi:'Haldi / Mehendi',drone:'Drone Visuals',portrait:'Portraits'};
+const PF=[
+ {s:'pf-w1',c:'wedding',t:'The Vows at Dusk',r:[1200,800]},{s:'pf-w2',c:'wedding',t:'Kashi Yatra',r:[900,1150]},
+ {s:'pf-w3',c:'wedding',t:'First Look',r:[1200,850]},{s:'pf-w4',c:'wedding',t:'Sacred Fire',r:[1000,1000]},
+ {s:'pf-w5',c:'wedding',t:'Moonlit Reception',r:[1200,780]},{s:'pf-p1',c:'prewed',t:'Lakeside Letters',r:[900,1200]},
+ {s:'pf-p2',c:'prewed',t:'Golden Hour Drive',r:[1200,800]},{s:'pf-p3',c:'prewed',t:'Field of Marigold',r:[1200,900]},
+ {s:'pf-h1',c:'haldi',t:'Turquoise & Turmeric',r:[1200,820]},{s:'pf-h2',c:'haldi',t:'Mehendi Whispers',r:[850,1100]},
+ {s:'pf-h3',c:'haldi',t:'Splash of Joy',r:[1200,860]},{s:'pf-d1',c:'drone',t:'Venue Panorama',r:[1200,750]},
+ {s:'pf-d2',c:'drone',t:'Aerial Entry Shot',r:[1200,800]},{s:'pf-d3',c:'drone',t:'Sky Mandap',r:[1200,900]},
+ {s:'pf-d4',c:'drone',t:'Coastline Vows',r:[1200,760]},{s:'pf-po1',c:'portrait',t:'Bride, Unscripted',r:[900,1200]},
+ {s:'pf-po2',c:'portrait',t:'The Groom Series',r:[850,1050]},{s:'pf-po3',c:'portrait',t:'Red Carpet Frame',r:[1200,850]}];
+
+const REVIEWS=[
+ {q:'They didn\u2019t just photograph our wedding — they bottled the feeling. Watching our 4K film for the first time, both our mothers cried all over again.',n:'Aishwarya & Rohan',m:'Destination Wedding · Udaipur'},
+ {q:'The drone entry shot gave me actual goosebumps. Worth every rupee, and then some. Our guests still talk about it.',n:'Meghana Reddy',m:'Reception · Hyderabad'},
+ {q:'Same-day reels from our sangeet night — our guests were posting before the party even ended. Unbelievable team.',n:'Karthik & Sruthi',m:'Sangeet & Wedding · Warangal'},
+ {q:'The flush-mount album is the most beautiful object in our home. The paper, the binding — a genuine heirloom.',n:'Dr. Latha Krishnan',m:'Wedding · Chennai'},
+ {q:'Calm, invisible, and somehow everywhere at once. Every ritual covered without a single staged moment.',n:'Priya & Anil',m:'Traditional Wedding · Vijayawada'},
+ {q:'Their colour grading is on another level — our haldi photos look like they belong in a magazine.',n:'Sneha Varma',m:'Haldi & Mehendi · Kochi'}];
+
+const TEAM=[
+ {n:'Arjun Meher',r:'FOUNDER · LEAD CINEMATOGRAPHER',b:'Nine years chasing honest light. Believes every ritual has one perfect angle.',s:'prajanika-t1'},
+ {n:'Shruti Kalam',r:'CREATIVE DIRECTOR',b:'Concept boards, art direction — and the person who cries at every first look.',s:'prajanika-t2'},
+ {n:'Devi Rao',r:'AERIAL SPECIALIST · DGCA PILOT',b:'500+ logged flight hours. Makes venues look like cinema from above.',s:'prajanika-t3'},
+ {n:'Nandini Iyer',r:'EDITOR & COLORIST',b:'DaVinci-certified. Builds the 4K masters, the teasers and the same-day reels.',s:'prajanika-t4'}];
+
+const GEAR=[
+ {n:'Sony FX3 Cinema Line',s:'FULL-FRAME · 4K 120FPS · 10-BIT S-LOG3',i:'video',seed:'g1'},
+ {n:'FE 24-70mm f/2.8 GM II',s:'WORKHORSE ZOOM · SHARP EDGE-TO-EDGE',i:'aperture',seed:'g2'},
+ {n:'FE 85mm f/1.4 GM',s:'PORTRAIT BOKEH KING',i:'camera',seed:'g3'},
+ {n:'DJI Mavic 3 Pro',s:'TRIPLE CAMERA · 5.1K · 46-MIN FLIGHT',i:'drone',seed:'g4'},
+ {n:'Aputure 600d + Light Dome',s:'DAYLIGHT POWER, SOFT AS CANDLELIGHT',i:'sun',seed:'g5'},
+ {n:'DJI RS 3 Pro Gimbal',s:'BUTTERY HANDHELD CINEMA MOVES',i:'film',seed:'g6'}];
+
+/* ================= REVEAL OBSERVER ================= */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12,rootMargin:'0px 0px -7% 0px'});
+ $$('.rv').forEach(el=>io.observe(el));
+function rearm(pg){pg.querySelectorAll('.rv').forEach(el=>{el.classList.remove('in');io.unobserve(el);io.observe(el)})}
+
+/* ================= TOASTS ================= */
+function toast(t,m,ic='check'){
+  const el=document.createElement('div');el.className='toast';
+  el.innerHTML=`<svg class="ic ti"><use href="#i-${ic}"/></svg><div><b>${t}</b><p>${m}</p></div>`;
+  $('#toasts').append(el);
+  setTimeout(()=>{el.classList.add('out');setTimeout(()=>el.remove(),380)},4200);
+}
+
+/* ================= SPA ROUTER ================= */
+const PAGES=['home','weddings','portfolio','builder','about','contact'];
+let cur='';
+function showPage(id){
+  if(!PAGES.includes(id))id='home';
+  cur=id;
+  $$('.page').forEach(p=>p.classList.toggle('act',p.id===id));
+  $$('[data-nav]').forEach(a=>a.classList.toggle('on',a.dataset.page===id));
+  window.scrollTo({top:0,left:0,behavior:'instant'});
+  rearm(document.getElementById(id));
+  closeMenu();
+}
+function go(id){id=(PAGES.includes(id))?id:'home';('#'+id)===location.hash?showPage(id):location.hash=id;}
+window.addEventListener('hashchange',()=>showPage(location.hash.slice(1)));
+document.addEventListener('click',e=>{
+  const g=e.target.closest('[data-go]');if(!g)return;
+  e.preventDefault();
+  if(g.dataset.prefill==='qe')applyQuickToBuilder();
+  if(g.dataset.event)state.event=g.dataset.event;
+  if(g.dataset.event||g.dataset.prefill){syncUI();calc();}
+  go(g.dataset.go);
+  if(g.dataset.filter)setFilter(g.dataset.filter);
+});
+
+/* ================= HEADER / MENU ================= */
+addEventListener('scroll',()=>$('#hdr').classList.toggle('sc',scrollY>30),{passive:true});
+function closeMenu(){$('#mnav').classList.remove('open');document.body.classList.remove('lock')}
+ $('#burger').addEventListener('click',()=>{$('#mnav').classList.add('open');document.body.classList.add('lock')});
+ $('#mnavClose').addEventListener('click',closeMenu);
+
+/* ================= CURSOR ================= */
+if(matchMedia('(pointer:fine)').matches){
+  const R=$('#curR'),D=$('#curD');let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+  addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;D.style.left=mx+'px';D.style.top=my+'px';
+    R.classList.toggle('hov',!!e.target.closest('a,button,.chip,.sw,.pf-item,.ba,input,select,textarea,label'))});
+  (function loop(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;R.style.left=rx+'px';R.style.top=ry+'px';requestAnimationFrame(loop)})();
+}
+
+/* ================= SPLASH ================= */
+(function(){
+  const splash=$('#splash'),fill=$('.sp-fill'),pct=$('#spPct'),line=$('#spLine');
+  const msgs=['CALIBRATING LENSES','ARMING DRONE FLEET','LOADING COLOR SCIENCE','BUFFERING SHOWREEL','READY'];
+  let p=0,li=0,done=false;
+  function finish(){
+    if(done)return;done=true;
+    line.textContent='READY';fill.style.width='100%';pct.textContent='100';
+    setTimeout(()=>{splash.classList.add('done');document.body.classList.add('ready');setTimeout(()=>splash.remove(),1200)},420);
+  }
+  (function step(){
+    if(done)return;
+    p=Math.min(100,p+Math.random()*7+2.5);
+    fill.style.width=p+'%';pct.textContent=String(Math.floor(p)).padStart(3,'0');
+    const nl=Math.min(msgs.length-1,Math.floor(p/22));
+    if(nl!==li){li=nl;line.textContent=msgs[nl];}
+    p<100?setTimeout(step,55+Math.random()*130):finish();
+  })();
+  $('#spSkip').addEventListener('click',finish);
+  splash.addEventListener('click',finish);
+})();
+
+/* ================= HERO ================= */
+const heroImgs=$$('.hero-bg img');let hi=0;heroImgs[0].classList.add('on');
+setInterval(()=>{heroImgs[hi].classList.remove('on');hi=(hi+1)%heroImgs.length;heroImgs[hi].classList.add('on')},5500);
+// running timecode (24fps)
+(function(){let t0=null;const el=$('#tc');
+  (function loop(ts){if(!t0)t0=ts;const s=(ts-t0)/1000;
+    const f=String(Math.floor(s*24)%24).padStart(2,'0'),ss=String(Math.floor(s)%60).padStart(2,'0'),
+          mm=String(Math.floor(s/60)%60).padStart(2,'0'),hh=String(Math.floor(s/3600)).padStart(2,'0');
+    el.textContent=`${hh}:${mm}:${ss}:${f}`;requestAnimationFrame(loop)})(0);
+})();
+// marquee duplicate for seamless loop
+ $('#mqTrack').innerHTML+=$('#mqTrack').innerHTML;
+
+/* ================= COUNTERS ================= */
+function countUp(el){
+  const t=+el.dataset.count,suf=el.dataset.suf||'',st=performance.now(),dur=1900;
+  (function tk(n){const p=Math.min(1,(n-st)/dur),e=1-Math.pow(1-p,3);
+    el.textContent=Math.round(t*e).toLocaleString('en-IN')+suf;
+    if(p<1)requestAnimationFrame(tk)})(st);
+}
+new IntersectionObserver((es,obs)=>{es.forEach(e=>{if(e.isIntersecting){$$('.num[data-count]').forEach(countUp);obs.disconnect()}})},{threshold:.3}).observe($('#stats'));
+
+/* ================= BEFORE / AFTER ================= */
+const BA_SCENES=[{n:'The Ceremony',s:'prajanika-ba1'},{n:'Bridal Portrait',s:'prajanika-ba2'},{n:'Aerial Frame',s:'prajanika-ba3'}];
+const ba=$('#ba');let baScene=0,baBusy=false;
+ $('#baTabs').innerHTML=BA_SCENES.map((s,i)=>`<button class="ba-tab ${i?'':'on'}" data-i="${i}">${s.n}</button>`).join('');
+ $('#baTabs').addEventListener('click',e=>{
+  const b=e.target.closest('.ba-tab');if(!b||baBusy)return;
+  $$('.ba-tab').forEach(x=>x.classList.toggle('on',x===b));
+  baScene=+b.dataset.i;baBusy=true;ba.classList.add('fading');
+  setTimeout(()=>{
+    const src=i=>`https://picsum.photos/seed/${BA_SCENES[baScene].s}/1600/900.jpg`;
+    $('#baG').src=src();$('#baR').src=src();ba.classList.remove('fading');
+    setTimeout(()=>baBusy=false,400);
+  },300);
+});
+function setBA(pct){ba.style.setProperty('--cut',Math.max(4,Math.min(96,pct))+'%')}
+let baDrag=false;
+function baMove(e){const r=ba.getBoundingClientRect();setBA((e.clientX-r.left)/r.width*100)}
+ba.addEventListener('pointerdown',e=>{baDrag=true;ba.setPointerCapture(e.pointerId);baMove(e)});
+ba.addEventListener('pointermove',e=>{if(baDrag||e.pointerType==='mouse')baMove(e)});
+ba.addEventListener('pointerup',()=>baDrag=false);
+ba.addEventListener('keydown',e=>{
+  const v=parseFloat(getComputedStyle(ba).getPropertyValue('--cut'));
+  if(e.key==='ArrowLeft'){setBA(v-4);e.preventDefault()}
+  if(e.key==='ArrowRight'){setBA(v+4);e.preventDefault()}
+});
+
+/* ================= RITUALS ================= */
+(function(){
+  $('#rituals').innerHTML=RITUALS.map((r,i)=>`
+  <article class="ritual ${i%2?'flip':''}">
+    <div class="r-media rv">
+      <div class="r-num">${r.num}</div>
+      <div class="frame"><img loading="lazy" src="https://picsum.photos/seed/${r.img}/900/720.jpg" alt="${r.title}"></div>
+      <span class="r-meta mono">${r.num} · ${r.tag}</span>
+    </div>
+    <div class="r-body rv d1">
+      <p class="k mono">${r.dur}</p>
+      <h3>${r.title}</h3>
+      <p class="rd">${r.desc}</p>
+      <ul class="r-feats">${r.features.map(f=>`<li><svg class="ic"><use href="#i-check"/></svg>${f}</li>`).join('')}</ul>
+      <div class="r-buy">
+        <div class="r-price"><small data-lbl="from">from</small><span data-base="${r.price}">${fmt(r.price)}</span></div>
+        <div class="r-cta">
+          <button class="btn gold sm" data-go="builder" data-event="${r.id}">Customize <svg class="ic"><use href="#i-arrow"/></svg></button>
+          <a class="btn ghost sm" target="_blank" rel="noopener" href="${wa(`Namaste Prajanika Studio! I am interested in the "${r.title}" package (from ${fmt(r.price)}). Could you share details and availability?`)}">Enquire</a>
+        </div>
+      </div>
+      <div class="drone">
+        <div class="drone-h">
+          <button class="sw" aria-pressed="false" aria-label="Toggle drone add-on"></button>
+          <svg class="ic"><use href="#i-drone"/></svg>
+          <span class="t">Add aerial drone coverage</span>
+          <span class="p">+${fmt(8000)}</span>
+        </div>
+        <div class="drone-tiers">
+          ${Object.entries(TIER).map(([k,t],j)=>`<button class="tch ${j?'':'on'}" data-k="${k}">${t.n}<b>${fmt(t.p)}</b></button>`).join('')}
+        </div>
+        <p class="drone-sub mono">${TIER.essential.d}</p>
+      </div>
+    </div>
+  </article>`).join('');
+  $$('#rituals .ritual').forEach(rit=>{
+    const sw=rit.querySelector('.sw'),dr=rit.querySelector('.drone'),
+          price=rit.querySelector('.r-price span'),lbl=rit.querySelector('[data-lbl]'),
+          pTxt=rit.querySelector('.drone-h .p'),sub=rit.querySelector('.drone-sub');
+    const base=+price.dataset.base;let tier='essential',on=false;
+    const paint=()=>{
+      price.textContent=fmt(base+(on?TIER[tier].p:0));
+      price.classList.remove('pop');void price.offsetWidth;price.classList.add('pop');
+      lbl.textContent=on?'incl. drone':'from';
+    };
+    sw.addEventListener('click',()=>{
+      on=!on;sw.classList.toggle('on',on);sw.setAttribute('aria-pressed',on);
+      dr.classList.toggle('open',on);paint();
+    });
+    dr.addEventListener('click',e=>{
+      const c=e.target.closest('.tch');if(!c)return;
+      tier=c.dataset.k;dr.querySelectorAll('.tch').forEach(x=>x.classList.toggle('on',x===c));
+      pTxt.textContent='+'+fmt(TIER[tier].p);sub.textContent=TIER[tier].d;paint();
+    });
+  });
+})();
+
+/* ================= QUICK ESTIMATOR (HOME) ================= */
+const qe={event:'wedding',days:1,drone:false};
+ $('#qeEvent').innerHTML=EVENTS.map(e=>`<option value="${e.id}" ${e.id==='wedding'?'selected':''}>${e.name}</option>`).join('');
+function calcQE(){
+  const ev=EVENTS.find(e=>e.id===qe.event);
+  const total=ev.perDay*qe.days+(qe.drone?12000:0);
+  const out=$('#qeOut');out.textContent=fmt(total);
+  out.classList.remove('pop');void out.offsetWidth;out.classList.add('pop');
+  $('#qeWa').href=wa(`Namaste Prajanika Studio! Quick plan: ${ev.name}, ${qe.days} day(s)${qe.drone?' with drone coverage':''}. Ballpark ${fmt(total)}. When can we talk?`);
+  return total;
+}
+ $('#qeEvent').addEventListener('change',e=>{qe.event=e.target.value;calcQE()});
+ $('#qeM').addEventListener('click',()=>{qe.days=Math.max(1,qe.days-1);$('#qeV').textContent=qe.days;calcQE()});
+ $('#qeP').addEventListener('click',()=>{qe.days=Math.min(5,qe.days+1);$('#qeV').textContent=qe.days;calcQE()});
+ $('#qeDrone').addEventListener('click',function(){
+  qe.drone=!qe.drone;this.classList.toggle('on',qe.drone);this.setAttribute('aria-pressed',qe.drone);calcQE();
+});
+calcQE();
+
+/* ================= REVIEWS ================= */
+let ri=0,rTimer;
+ $('#revStars').innerHTML='<svg class="ic"><use href="#i-star"/></svg>'.repeat(5);
+ $('#revDots').innerHTML=REVIEWS.map((_,i)=>`<span class="dot ${i?'':'on'}" data-i="${i}"></span>`).join('');
+function showRev(i,instant){
+  ri=(i+REVIEWS.length)%REVIEWS.length;
+  const box=$('#revBox');
+  const paint=()=>{
+    $('#revQ').textContent='\u201C'+REVIEWS[ri].q+'\u201D';
+    $('#revWho').innerHTML=`<b>${REVIEWS[ri].n}</b> &nbsp;·&nbsp; <span>${REVIEWS[ri].m}</span>`;
+    $$('#revDots .dot').forEach((d,j)=>d.classList.toggle('on',j===ri));
+  };
+  instant?paint():(box.classList.add('swap'),setTimeout(()=>{paint();box.classList.remove('swap')},380));
+}
+showRev(0,true);
+function revAuto(){clearInterval(rTimer);rTimer=setInterval(()=>showRev(ri+1),6500)}
+revAuto();
+ $('#revPrev').addEventListener('click',()=>{showRev(ri-1);revAuto()});
+ $('#revNext').addEventListener('click',()=>{showRev(ri+1);revAuto()});
+ $('#revDots').addEventListener('click',e=>{const d=e.target.closest('.dot');if(d){showRev(+d.dataset.i);revAuto()}});
+ $('#revBox').addEventListener('mouseenter',()=>clearInterval(rTimer));
+ $('#revBox').addEventListener('mouseleave',revAuto);
+
+/* ================= PORTFOLIO ================= */
+let pfList=PF;
+ $('#pfTabs').innerHTML=Object.entries(PF_CATS).map(([k,v],i)=>`<button class="ptab ${i?'':'on'}" data-c="${k}">${v}</button>`).join('');
+function renderGrid(cat){
+  pfList=PF.filter(p=>cat==='all'||p.c===cat);
+  $('#pgrid').innerHTML=pfList.map((p,i)=>`
+    <figure class="pf-item" data-i="${i}" style="animation-delay:${i*45}ms">
+      <img loading="lazy" src="https://picsum.photos/seed/${p.s}/${p.r[0]}/${p.r[1]}.jpg" alt="${p.t}">
+      <figcaption class="ov"><span><span class="t">${p.t}</span><span class="c">${PF_CATS[p.c].toUpperCase()}</span></span><svg class="ic"><use href="#i-zoom"/></svg></figcaption>
+    </figure>`).join('');
+  $('#pfCount').textContent=`SHOWING ${pfList.length} OF ${PF.length} FRAMES`;
+}
+function setFilter(cat){
+  $$('.ptab').forEach(t=>t.classList.toggle('on',t.dataset.c===cat));
+  renderGrid(cat);
+}
+ $('#pfTabs').addEventListener('click',e=>{const t=e.target.closest('.ptab');if(t)setFilter(t.dataset.c)});
+ $('#pgrid').addEventListener('click',e=>{const it=e.target.closest('.pf-item');if(it)openLB(+it.dataset.i)});
+renderGrid('all');
+
+/* ---- lightbox with zoom & pan ---- */
+let lbI=0,z=1,tx=0,ty=0;
+const lbImg=$('#lbImg'),stage=$('#lbStage');
+function lbApply(){lbImg.style.transform=`translate(${tx}px,${ty}px) scale(${z})`}
+function openLB(i){
+  lbI=i;lbReset();
+  const p=pfList[i];
+  lbImg.src=`https://picsum.photos/seed/${p.s}/1600/${Math.round(1600*p.r[1]/p.r[0])}.jpg`;
+  lbImg.alt=p.t;$('#lbTitle').textContent=p.t;$('#lbCat').textContent=PF_CATS[p.c].toUpperCase();
+  $('#lbCount').textContent=String(i+1).padStart(2,'0')+' / '+String(pfList.length).padStart(2,'0');
+  $('#lb').classList.add('open');$('#lb').setAttribute('aria-hidden','false');document.body.classList.add('lock');
+}
+function lbReset(){z=1;tx=0;ty=0;lbImg.style.transformOrigin='50% 50%';lbImg.classList.remove('pan');lbApply()}
+function lbNav(d){openLB((lbI+d+pfList.length)%pfList.length)}
+function closeLB(){$('#lb').classList.remove('open');$('#lb').setAttribute('aria-hidden','true');document.body.classList.remove('lock')}
+ $('#lbX').addEventListener('click',closeLB);
+ $('#lbP').addEventListener('click',()=>lbNav(-1));
+ $('#lbN').addEventListener('click',()=>lbNav(1));
+ $('#lb').addEventListener('click',e=>{if(e.target.id==='lb')closeLB()});
+addEventListener('keydown',e=>{
+  if(!$('#lb').classList.contains('open'))return;
+  if(e.key==='Escape')closeLB();
+  if(e.key==='ArrowLeft')lbNav(-1);
+  if(e.key==='ArrowRight')lbNav(1);
+});
+let down=null,moved=false,panning=false,px0=0,py0=0;
+stage.addEventListener('pointerdown',e=>{
+  down={x:e.clientX,y:e.clientY};moved=false;
+  if(z>1){panning=true;stage.setPointerCapture(e.pointerId);px0=e.clientX-tx;py0=e.clientY-ty;lbImg.classList.add('pan')}
+});
+stage.addEventListener('pointermove',e=>{
+  if(!down)return;
+  if(Math.hypot(e.clientX-down.x,e.clientY-down.y)>10)moved=true;
+  if(panning&&z>1){
+    tx=e.clientX-px0;ty=e.clientY-py0;
+    const r=lbImg.getBoundingClientRect(),mx=r.width*(z-1)/2,my=r.height*(z-1)/2;
+    tx=Math.max(-mx,Math.min(mx,tx));ty=Math.max(-my,Math.min(my,ty));
+    lbApply();
+  }
+});
+stage.addEventListener('pointerup',e=>{
+  if(!down)return;
+  if(!moved){ // click: toggle zoom at point
+    if(z>1){lbReset()}
+    else{
+      const r=lbImg.getBoundingClientRect();
+      const ox=Math.max(0,Math.min(100,(e.clientX-r.left)/r.width*100));
+      const oy=Math.max(0,Math.min(100,(e.clientY-r.top)/r.height*100));
+      z=2.4;tx=0;ty=0;lbImg.style.transformOrigin=`${ox}% ${oy}%`;lbApply();
+    }
+  }else if(z===1&&Math.abs(e.clientX-down.x)>60){down.x-e.clientX>0?lbNav(-1):lbNav(1)}
+  panning=false;down=null;lbImg.classList.remove('pan');
+});
+
+/* ================= BUILDER ================= */
+const state={event:'wedding',days:2,crew:3,album:'flush',drone:'signature',extras:['reels']};
+function chipHTML(id,main,sub,sel){return `<button class="chip ${sel?'on':''}" data-id="${id}"><span>${main}</span><small>${sub}</small></button>`}
+function renderChips(){
+  $('#bEvent').innerHTML=EVENTS.map(e=>chipHTML(e.id,e.name,fmt(e.perDay)+' / DAY',e.id===state.event)).join('');
+  $('#bCrew').innerHTML=CREW.map(c=>chipHTML(c.n,'Crew of '+c.n,c.note,c.n===state.crew)).join('');
+  $('#bAlbum').innerHTML=ALBUMS.map(a=>chipHTML(a.id,a.name,a.price?fmt(a.price):'NOT NOW',a.id===state.album)).join('');
+  $('#bDrone').innerHTML=DRONES.map(d=>chipHTML(d.id,d.name,d.price?fmt(d.price):'GROUND-ONLY',d.id===state.drone)).join('');
+  $('#bExtras').innerHTML=EXTRAS.map(x=>chipHTML(x.id,x.name,'+'+fmt(x.price),state.extras.includes(x.id))).join('');
+}
+function bindChips(host,fn){
+  $(host).addEventListener('click',e=>{
+    const c=e.target.closest('.chip');if(!c)return;fn(+c.dataset.id||c.dataset.id);
+    if(fn!==null){syncUI();calc();}
+  });
+}
+function syncUI(){
+  const map={'#bEvent':state.event,'#bCrew':state.crew,'#bAlbum':state.album,'#bDrone':state.drone};
+  for(const [sel,val] of Object.entries(map))
+    $(sel).querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',String(c.dataset.id)===String(val)));
+  $('#bExtras').querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',state.extras.includes(c.dataset.id)));
+  $('#bDayV').textContent=state.days;
+}
+bindChips('#bEvent',id=>state.event=id);
+bindChips('#bCrew',id=>state.crew=+id);
+bindChips('#bAlbum',id=>state.album=id);
+bindChips('#bDrone',id=>state.drone=id);
+ $('#bExtras').addEventListener('click',e=>{
+  const c=e.target.closest('.chip');if(!c)return;
+  const id=c.dataset.id;
+  state.extras=state.extras.includes(id)?state.extras.filter(x=>x!==id):[...state.extras,id];
+  syncUI();calc();
+});
+ $('#bDayM').addEventListener('click',()=>{state.days=Math.max(1,state.days-1);syncUI();calc()});
+ $('#bDayP').addEventListener('click',()=>{state.days=Math.min(7,state.days+1);syncUI();calc()});
+
+let prevTotal=0;
+function calc(){
+  const ev=EVENTS.find(e=>e.id===state.event),cr=CREW.find(c=>c.n===state.crew),
+        al=ALBUMS.find(a=>a.id===state.album),dr=DRONES.find(d=>d.id===state.drone);
+  const lines=[
+    {l:`${ev.name} — ${state.days} day${state.days>1?'s':''}`,s:fmt(ev.perDay)+' / DAY',a:ev.perDay*state.days}];
+  if(cr.add)lines.push({l:`Crew of ${cr.n}`,s:fmt(cr.add)+' / DAY',a:cr.add*state.days});
+  if(al.price)lines.push({l:al.name,s:'HANDCRAFTED',a:al.price});
+  if(dr.price)lines.push({l:`Drone — ${dr.name}`,s:'4K AERIAL',a:dr.price});
+  state.extras.forEach(id=>{const x=EXTRAS.find(e=>e.id===id);lines.push({l:x.name,s:'ADD-ON',a:x.price})});
+  const total=lines.reduce((s,l)=>s+l.a,0);
+  $('#bLines').innerHTML=lines.map((l,i)=>
+    `<div class="ln" style="animation-delay:${i*55}ms"><span class="l">${l.l}<small>${l.s}</small></span><span class="a">${fmt(l.a)}</span></div>`).join('');
+  $('#bHint').textContent=fmt(ev.perDay)+' / DAY BASE';
+  // animated total
+  const from=prevTotal,st=performance.now();
+  (function tk(n){const p=Math.min(1,(n-st)/600),e=1-Math.pow(1-p,3);
+    $('#bTotal').textContent=fmt(from+(total-from)*e);
+    if(p<1)requestAnimationFrame(tk);else prevTotal=total})(st);
+  $('#bWa').href=wa(['Namaste Prajanika Studio! I would like to book:',
+    `Event: ${ev.name}`,`Coverage: ${state.days} day(s)`,`Crew: ${state.crew} cinematographers`,
+    `Album: ${al.name}`,`Drone: ${dr.name}`,
+    state.extras.length?`Extras: ${state.extras.map(id=>EXTRAS.find(x=>x.id===id).name).join(', ')}`:null,
+    `Estimated total: ${fmt(total)}`,'Please share availability and next steps. — Sent from the website builder']
+    .filter(Boolean).join('\n'));
+}
+function applyQuickToBuilder(){
+  state.event=qe.event;state.days=Math.min(7,qe.days);state.drone=qe.drone?'signature':'off';
+}
+renderChips();syncUI();calc();
+// callback form
+ $('#bCb').addEventListener('click',function(){
+  const f=$('#cbForm');f.hidden=!f.hidden;
+  if(!f.hidden){f.querySelector('#cbDate').min=new Date().toISOString().slice(0,10);this.textContent='Hide the form'}
+  else this.textContent='Request a callback instead';
+});
+ $('#cbForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const n=$('#cbName').value.trim(),p=$('#cbPhone').value.trim(),d=$('#cbDate').value;
+  if(!n||!p){toast('Almost there','Please add your name and phone number.','x');return}
+  window.open(wa(`Namaste! Callback request from ${n} (${p})${d?' for '+d:''}. — via the package builder.`),'_blank');
+  toast('Request received','Arjun will personally call you within a few hours.');
+  e.target.reset();e.target.hidden=true;$('#bCb').textContent='Request a callback instead';
+});
+
+/* ================= ABOUT: TEAM & GEAR ================= */
+ $('#team').innerHTML=TEAM.map((t,i)=>`
+  <div class="tm rv d${(i%4)+1}">
+    <div class="ph"><img loading="lazy" src="https://picsum.photos/seed/${t.s}/600/800.jpg" alt="${t.n}"><span class="tm-chip mono">T-0${i+1}</span></div>
+    <h4>${t.n}</h4><span class="rl mono">${t.r}</span><p>${t.b}</p>
+  </div>`).join('');
+ $$('#team .rv').forEach(el=>io.observe(el));
+ $('#gearRows').innerHTML=GEAR.map((g,i)=>`
+  <div class="gr ${i?'':'on'}" data-seed="${g.seed}" data-lbl="${g.s}">
+    <span class="gi"><svg class="ic"><use href="#i-${g.i}"/></svg></span>
+    <span><h4>${g.n}</h4><div class="sp">${g.s}</div></span>
+    <span class="st">IN THE KIT</span>
+  </div>`).join('');
+(function(){
+  const img=$('#gearImg'),lbl=$('#gearLbl');let active=$('.gr');
+  function setGear(r){
+    if(r===active)return;active=r;
+    $$('.gr').forEach(x=>x.classList.toggle('on',x===r));
+    img.style.opacity=.15;
+    const im=new Image();
+    im.onload=()=>{img.src=im.src;lbl.textContent=r.dataset.lbl;requestAnimationFrame(()=>img.style.opacity=1)};
+    im.src=`https://picsum.photos/seed/${r.dataset.seed}/800/1000.jpg`;
+  }
+  $('#gearRows').addEventListener('mouseover',e=>{const r=e.target.closest('.gr');if(r)setGear(r)});
+  $('#gearRows').addEventListener('click',e=>{const r=e.target.closest('.gr');if(r)setGear(r)});
+})();
+
+/* ================= CONTACT ================= */
+ $('#ctEvent').innerHTML=EVENTS.map(e=>`<option>${e.name}</option>`).join('')+'<option>Other / Not sure yet</option>';
+ $('#ctDate').min=new Date().toISOString().slice(0,10);
+const bIn=$('#ctBudget');
+function syncBudget(){
+  const v=+bIn.value;
+  bIn.style.setProperty('--p',((v-bIn.min)/(bIn.max-bIn.min)*100)+'%');
+  $('#ctBudgetOut').textContent=fmt(v);
+}
+bIn.addEventListener('input',syncBudget);syncBudget();
+ $('#ctForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const n=$('#ctName').value.trim(),p=$('#ctPhone').value.trim();
+  if(!n||!p){toast('One small thing','Please share your name and phone so we can reach you.','x');return}
+  toast('Enquiry received','Thank you, '+n.split(' ')[0]+' — expect a call from us within 24 hours.','spark');
+  e.target.reset();syncBudget();
+});
+
+/* ================= INIT ================= */
+ $('#year').textContent=new Date().getFullYear();
+showPage(location.hash.slice(1)||'home');
+</script>
+</body>
+</html>
